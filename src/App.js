@@ -10,7 +10,7 @@ function App() {
   const [backdrop, setBackdrop] = useState('')
 
   function getData() {
-    const url = `${searchOptions.api}search/movie?api_key=${searchOptions.key}&query=harry+potter`
+    const url = `${searchOptions.api}search/movie?api_key=${searchOptions.key}&query=morbius`
 
     fetch(url)
       .then(res => res.json())
