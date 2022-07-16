@@ -1,0 +1,23 @@
+.home {
+    background: #5271FF;
+    color: #5CE1E6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-brand {
+    display: flex;
+    align-items: center;
+}
+
+.trailer-logo {
+    width: 181px;
+    height: auto;
+}
+
+.title {
+    font-family: 'Archive', sans-serif;
+    font-size: 150px;
+}
