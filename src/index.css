@@ -20,3 +20,10 @@ code {
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Sifonn Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Sifonn Pro'), url('./fonts/SIFONN_PRO.woff') format('woff');
+  }

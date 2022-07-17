@@ -1,12 +1,13 @@
 .browse {
-    background: #353F6D;
+    background: #353A54;
     height: 100vh;
 }
 
+/* Logo and hamburger */
 .heading-browse {
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-right: 10px;
 }
 
@@ -36,6 +37,7 @@
     height: auto;
 }
 
+/* Input box */
 .input-box {
     background: white;
     display: flex;
@@ -60,6 +62,8 @@
     margin: 5px;
     width: 240px;
     border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
 }
 
 .close-search-icon-div {
@@ -73,4 +77,42 @@
     height: auto;
 }
 
+/* Trending boxes */
+.top-movies {
+    margin: 25px 40px 10px 40px;
+    color: #5CE1E6;
+    font-family: 'Sifonn Pro';
+    font-size: 15px;
+}
 
+.trending-boxes {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0px 40px;
+    gap: 15px 0px;
+}
+
+.trending-box {
+    background: #7C53ED;
+    display: flex;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.trending-text {
+    margin-left: 10px;
+    color: white;
+    font-family: 'Sifonn Pro';
+    font-size: 17px;
+}
+
+.trending-poster-div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.trending-poster {
+    width: 65px;
+}

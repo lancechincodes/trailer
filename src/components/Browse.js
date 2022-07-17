@@ -8,6 +8,8 @@ function Browse() {
 
     return(
         <div className="browse"> 
+
+            {/* Logo and hamburger */}
             <heading className="heading-browse">
                 <div className="logo-browse">
                     <img className="logo-image-browse" src={logoImage} alt="Trailer Logo"/>
@@ -18,7 +20,7 @@ function Browse() {
                 </div>
             </heading>
 
-
+            {/* Input box */}
             <div className="input-box">
                 <div className="search-icon-div">
                     <img className="search-icon" src={search} alt="Search Icon"/>
@@ -34,6 +36,24 @@ function Browse() {
                     <img className="close-search-icon" src={closeSearch} alt="Delete Icon"/>
                 </div>
             </div>
+
+            {/* Trending boxes */}
+            <p className="top-movies">Top movies</p>
+            <div className="trending-boxes">
+                <div className="trending-box">
+                    <h3 className="trending-text">Trending Today</h3>
+                    <div className="trending-poster-div">
+                        <img className="trending-poster" src={hamburger} alt="Top trending poster today"/>
+                    </div>
+                </div>
+                <div className="trending-box">
+                    <h3 className="trending-text">Trending this week</h3>
+                    <div className="trending-poster-div">
+                        <img className="trending-poster" src={hamburger} alt="Top trending poster this week"/>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }
