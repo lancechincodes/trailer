@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react'
+import { DataContext } from './DataContext'
 import Home from './components/Home'
 import Browse from './components/Browse'
 
@@ -12,15 +13,18 @@ function App() {
   const [typeSearch, setTypeSearch] = useState('movie')
   const [trendingToday, setTrendingToday] = useState('')
   const [trendingThisWeek, setTrendingThisWeek] = useState('')
+  const [genreArr, setGenreArr] = useState([])
 
   useEffect(() => {
     getTrendingTodayData()
     getTrendingThisWeekData()
+    getGenreData()
   }, [])
 
   const searchOptions = {
     key: process.env.REACT_APP_TMDB_KEY,
-    api: "https://api.themoviedb.org/3/"
+    api: "https://api.themoviedb.org/3/",
+    language: "language=en-US"
   }
 
   function getTrendingTodayData() {
@@ -28,7 +32,6 @@ function App() {
     fetch(url)
       .then(res => res.json())
       .then(res => {
-        console.log(res)
         setTrendingToday(res.results[0].backdrop_path)
       })
       .catch(err => console.log(err))
@@ -44,20 +47,34 @@ function App() {
       .catch(err => console.log(err))
   }
 
+  function getGenreData() {
+    const url = `${searchOptions.api}genre/${typeSearch}/list?api_key=${searchOptions.key}&${searchOptions.language}`
+    fetch(url)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res)
+        setGenreArr(res.genres)
+      })
+      .catch(err => console.log(err))
+  }
+
   return (
     <div className="App">
       {/* AnimatePresence is used for exit transitions */}
       <AnimatePresence>
-        <Routes location={location} key={location.key}>
-          <Route path="/" element={<Home/>}/>
-          <Route 
-            path="/browse" 
-            element={<Browse
-              trendingToday={trendingToday}
-              trendingThisWeek={trendingThisWeek}
-            />}
-          />
-        </Routes>
+        <DataContext.Provider value={{searchOptions, typeSearch}}>
+          <Routes location={location} key={location.key}>
+            <Route path="/" element={<Home/>}/>
+            <Route 
+              path="/browse" 
+              element={<Browse
+                trendingToday={trendingToday}
+                trendingThisWeek={trendingThisWeek}
+                genreArr={genreArr}
+              />}
+            />
+          </Routes>
+        </DataContext.Provider>
       </AnimatePresence>
     </div>
   );

@@ -3,8 +3,9 @@ import logoImage from '../assets/logo-image.svg'
 import hamburger from '../assets/hamburger.svg'
 import search from '../assets/search.svg'
 import closeSearch from '../assets/close-search.svg'
+import GenreCard from './GenreCard'
 
-function Browse({trendingToday, trendingThisWeek}) {
+function Browse({trendingToday, trendingThisWeek, genreArr}) {
     const imagePath = 'https://image.tmdb.org/t/p/w500'
 
     return(
@@ -58,10 +59,12 @@ function Browse({trendingToday, trendingThisWeek}) {
             {/* Genre boxes */}
             <p className="browse-section-title">Browse all</p>
             <div className="genre-container">
-
+                {genreArr.map((genre) => (
+                    <GenreCard key={genre.id} id={genre.id} name={genre.name}/>
+                ))}
+                
+                <GenreCard/>
             </div>
-
-
         </div>
     )
 }

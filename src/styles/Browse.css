@@ -1,6 +1,7 @@
 .browse {
     background: #362C5D;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Logo and hamburger */
@@ -110,6 +111,7 @@
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin-right: 30px;
 }
 
@@ -117,4 +119,17 @@
     width: 100px;
     height: 100px;
     object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Genre boxes  (styling continued in Browse.js) */ 
+.genre-container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-auto-rows: 100px;
+    justify-content: center;
+    gap: 10px 10px;
+    height: 320px;
+    overflow: hidden;
+    overflow-y: scroll;
 }

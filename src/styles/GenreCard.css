@@ -1,0 +1,15 @@
+.genre-card {
+    background: #8C52FF;
+    border-radius: 10px;
+}
+
+.genre-card:last-child {
+    display: none;
+}
+
+.genre-title {
+    margin-left: 10px;
+    color: white;
+    font-family: 'Sifonn Pro';
+    font-size: 13px;
+}
