@@ -1,0 +1,13 @@
+.browse {
+    background: #353F6D;
+    height: 100vh;
+}
+
+.logo-image-browse {
+    width: 35px;
+    height: auto;
+}
+
+.logo-title-browse {
+    font-size: 30px;
+}

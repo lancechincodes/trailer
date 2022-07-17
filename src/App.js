@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       {/* AnimatePresence is used for exit transitions */}
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence>
         <Routes location={location} key={location.key}>
           <Route path="/" element={<Home/>}/>
           <Route path="/browse" element={<Browse/>}/>

@@ -2,19 +2,7 @@ import '../styles/Home.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import trailerLogo from '../assets/trailer-logo.svg'
-
-const homeVariants = {
-    hidden: {
-        opacity: 1
-    },
-    leave: {
-        transition: {
-            duration: .7,
-        },
-        opacity: 0,
-    }
-}
+import logoImage from '../assets/logo-image.svg'
 
 const brandVariants = {
     hidden: {
@@ -47,29 +35,25 @@ function Home() {
 
     setTimeout(()=> {
         navigate("/browse")
-    }, 2500)
+    }, 3000)
 
     return (
-        <motion.div className="home"
-            variants={homeVariants}
-            initial="hidden"
-            exit="leave"
-        >
+        <div className="home">
             <AnimatePresence>
                 {showBrand && (
                     <motion.div 
-                        className="full-brand"
+                        className="logo"
                         variants={brandVariants}
                         initial="hidden"
                         animate="visible"
                         exit="leave"
                     >
-                        <img className="trailer-logo" src={trailerLogo} alt="Trailer Logo"/>
-                        <h1 className="title">TRAILER</h1>
+                        <img className="logo-image" src={logoImage} alt="Trailer Logo"/>
+                        <h1 className="logo-title">TRAILER</h1>
                     </motion.div>
                 )}
             </AnimatePresence>
-        </motion.div>
+        </div>
     )
 }
 
