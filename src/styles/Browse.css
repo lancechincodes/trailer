@@ -1,5 +1,5 @@
 .browse {
-    background: #353A54;
+    background: #362C5D;
     height: 100vh;
 }
 
@@ -23,7 +23,7 @@
 .logo-title-browse {
     font-family: 'Archive', sans-serif;
     font-size: 35px;
-    color: #5CE1E6;
+    color: #0FF2F2;
 }
 
 .hamburger {
@@ -78,9 +78,9 @@
 }
 
 /* Trending boxes */
-.top-movies {
+.browse-section-title {
     margin: 25px 40px 10px 40px;
-    color: #5CE1E6;
+    color: #0FF2F2;
     font-family: 'Sifonn Pro';
     font-size: 15px;
 }
@@ -93,7 +93,7 @@
 }
 
 .trending-box {
-    background: #7C53ED;
+    background: #8C52FF;
     display: flex;
     height: 120px;
     border-radius: 10px;
@@ -114,5 +114,7 @@
 }
 
 .trending-poster {
-    width: 65px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }

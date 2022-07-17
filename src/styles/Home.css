@@ -1,5 +1,5 @@
 .home {
-    background: #7C53ED;
+    background: #8C52FF;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -19,5 +19,5 @@
 .logo-title {
     font-family: 'Archive', sans-serif;
     font-size: 50px;
-    color: #5CE1E6;
+    color: #0FF2F2
 }
