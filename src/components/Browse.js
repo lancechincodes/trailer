@@ -4,9 +4,11 @@ import hamburger from '../assets/hamburger.svg'
 import search from '../assets/search.svg'
 import closeSearch from '../assets/close-search.svg'
 import GenreCard from './GenreCard'
+import { useContext } from 'react'
+import { DataContext } from '../DataContext'
 
 function Browse({trendingToday, trendingThisWeek, genreArr}) {
-    const imagePath = 'https://image.tmdb.org/t/p/w500'
+    const { imagePath } = useContext(DataContext)
 
     return(
         <div className="browse"> 

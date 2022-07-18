@@ -95,12 +95,14 @@
 .trending-box {
     background: #8C52FF;
     display: flex;
+    flex-direction: column;
     height: 120px;
     border-radius: 10px;
 }
 
 .trending-text {
     margin-left: 10px;
+    margin-bottom: 0px;
     color: white;
     font-family: 'Sifonn Pro';
     font-size: 17px;
@@ -111,14 +113,16 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 30px;
+    overflow: hidden;
 }
 
 .trending-poster {
-    width: 100px;
-    height: 100px;
+    margin-top: 40px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
-    border-radius: 10px;
+    transform: rotate(30deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Genre boxes  (styling continued in Browse.js) */ 

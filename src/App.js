@@ -14,6 +14,7 @@ function App() {
   const [trendingToday, setTrendingToday] = useState('')
   const [trendingThisWeek, setTrendingThisWeek] = useState('')
   const [genreArr, setGenreArr] = useState([])
+  const imagePath = 'https://image.tmdb.org/t/p/w500'
 
   useEffect(() => {
     getTrendingTodayData()
@@ -62,7 +63,7 @@ function App() {
     <div className="App">
       {/* AnimatePresence is used for exit transitions */}
       <AnimatePresence>
-        <DataContext.Provider value={{searchOptions, typeSearch}}>
+        <DataContext.Provider value={{searchOptions, typeSearch, imagePath}}>
           <Routes location={location} key={location.key}>
             <Route path="/" element={<Home/>}/>
             <Route 
