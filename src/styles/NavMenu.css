@@ -25,6 +25,10 @@
     justify-content: center;
 }
 
+.nav-link {
+    text-decoration: none;
+}
+
 .nav-box-icon {
     display: flex;
     align-items: center;

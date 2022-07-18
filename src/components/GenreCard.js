@@ -1,32 +1,32 @@
 import '../styles/GenreCard.css'
 import { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { DataContext } from '../DataContext'
+import { getPosterForGenreData } from '../utils'
 
 function GenreCard({id, name}) {
-    const { searchOptions, typeSearch, imagePath } = useContext(DataContext)
-    const [genrePoster, setGenrePoster] = useState('')
+    const { searchOptions, imagePath } = useContext(DataContext)
+    const [genrePoster, setGenrePoster] = useState('')    
+    const [loadingGenrePoster, setLoadingGenrePoster] = useState(true)
 
     useEffect(() => {
-        getPosterForGenreData()
+        getPosterForGenreData(searchOptions.api, searchOptions.key, searchOptions.language, id, setGenrePoster, setLoadingGenrePoster)
     }, [])
 
-    // use id prop to make another fetch request to first movie poster corresponding to id
-    function getPosterForGenreData() {
-        const url = `${searchOptions.api}discover/${typeSearch}?api_key=${searchOptions.key}&${searchOptions.language}sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
-        fetch(url)
-            .then(res => res.json())
-            .then(res => {
-                setGenrePoster(res.results[0].backdrop_path)
-            })
-            .catch(err => console.log(err))
-    }
+    // if (loadingGenrePoster) {
+    //     return (
+    //         <p>Loading</p>
+    //     )
+    // }
 
     return (
         <div className="genre-card">
-            <p className="genre-title">{name}</p>
-            <div className="genre-poster-div">
-                <img className="genre-poster" src={imagePath + genrePoster} alt=""/>
-            </div>
+            <Link className="genre-link" to={`/browse/${name.toLowerCase()}`}>
+                <p className="genre-title">{name}</p>
+                <div className="genre-poster-div">
+                        <img className="genre-poster" src={imagePath + genrePoster} alt=""/>
+                </div>
+            </Link>
         </div>
     )
 }

@@ -3,10 +3,11 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
-.genre-card:last-child {
-    display: none;
+.genre-link {
+    text-decoration: none;
 }
 
 .genre-title {
@@ -26,7 +27,7 @@
 }
 
 .genre-poster {
-    margin-top: 40px;
+    margin-top: 25px;
     width: 60px;
     height: 60px;
     object-fit: cover;

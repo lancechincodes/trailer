@@ -1,19 +1,39 @@
 import '../styles/Browse.css'
+import '../styles/Loading.css'
 import logoImage from '../assets/logo-image.svg'
 import hamburger from '../assets/hamburger.svg'
 import search from '../assets/search.svg'
 import closeSearch from '../assets/close-search.svg'
 import GenreCard from './GenreCard'
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { DataContext } from '../DataContext'
 import { Link } from 'react-router-dom'
+import { getTrendingTodayData, getTrendingThisWeekData, getGenreData } from '../utils' 
 
-function Browse({trendingToday, trendingThisWeek, genreArr}) {
-    const { imagePath } = useContext(DataContext)
+function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingThisWeek, genreArr, setGenreArr}) {
+    const { searchOptions, imagePath } = useContext(DataContext)
+    const [loadingToday, setLoadingToday] = useState(true)
+    const [loadingWeek, setLoadingWeek] = useState(true)
+    const [loadingGenre, setLoadingGenre] = useState(true)
 
-    return(
+    useEffect(() => {
+        getTrendingTodayData(searchOptions.api, searchOptions.key, setTrendingToday, setLoadingToday)
+        getTrendingThisWeekData(searchOptions.api, searchOptions.key, setTrendingThisWeek, setLoadingWeek)
+        getGenreData(searchOptions.api, searchOptions.key, searchOptions.language, setGenreArr, setLoadingGenre)
+      }, [])
+
+    // console.log(loadingToday, loadingWeek, loadingGenre)
+    // if (loadingToday || loadingWeek || loadingGenre) {
+    //     return (
+    //         <div className="loading-page">
+    //             <span className="loader">LOADING</span>
+    //         </div>
+    //     )
+    // }
+    
+    // else {
+    return (
         <div className="browse"> 
-
             {/* Logo and hamburger */}
             <header className="heading-browse">
                 <div className="logo-browse">
@@ -36,7 +56,7 @@ function Browse({trendingToday, trendingThisWeek, genreArr}) {
                     <input 
                         className="input-text"
                         type="text"
-                        placeholder="Search movie, show, or genre"
+                        placeholder="Search movie or genre"
                     />
                 </form>
                 <div className="close-search-icon-div"> 
@@ -45,20 +65,24 @@ function Browse({trendingToday, trendingThisWeek, genreArr}) {
             </div>
 
             {/* Trending boxes */}
-            <p className="browse-section-title">Top movies</p>
+            <p className="browse-section-title">Popular movies</p>
             <div className="trending-boxes">
-                <div className="trending-box">
-                    <h3 className="trending-text">Trending today</h3>
-                    <div className="trending-poster-div">
-                        <img className="trending-poster" src={imagePath + trendingToday} alt="Top trending poster today"/>
+                    <div className="trending-box">
+                        <Link to="/browse/trending-today">
+                            <h3 className="trending-text">Trending today</h3>
+                            <div className="trending-poster-div">
+                                <img className="trending-poster" src={imagePath + trendingToday} alt="Top trending poster today"/>
+                            </div>
+                        </Link>
                     </div>
-                </div>
-                <div className="trending-box">
-                    <h3 className="trending-text">Trending this week</h3>
-                    <div className="trending-poster-div">
-                        <img className="trending-poster" src={imagePath + trendingThisWeek} alt="Top trending poster this week"/>
+                    <div className="trending-box">
+                        <Link to="/browse/trending-this-week">
+                            <h3 className="trending-text">Trending this week</h3>
+                            <div className="trending-poster-div">
+                                <img className="trending-poster" src={imagePath + trendingThisWeek} alt="Top trending poster this week"/>
+                            </div>
+                        </Link>
                     </div>
-                </div>
             </div>
 
             {/* Genre boxes */}
@@ -66,12 +90,11 @@ function Browse({trendingToday, trendingThisWeek, genreArr}) {
             <div className="genre-container">
                 {genreArr.map((genre) => (
                     <GenreCard key={genre.id} id={genre.id} name={genre.name}/>
-                ))}
-                
-                <GenreCard/>
+                ))}                
             </div>
         </div>
     )
+    // }
 }
 
 export default Browse
