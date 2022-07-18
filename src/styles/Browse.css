@@ -51,6 +51,7 @@
     padding: 10px;
     height: 15px;
     border-radius: 10px;
+    width: 334px;
 }
 
 .search-icon-div {
@@ -92,7 +93,9 @@
 
 .trending-boxes {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 352px;
+    grid-template-rows: repeat(2, 120px);
+    justify-content: center;
     margin: 0px 40px;
     gap: 15px 0px;
 }
