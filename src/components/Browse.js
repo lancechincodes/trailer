@@ -6,6 +6,7 @@ import closeSearch from '../assets/close-search.svg'
 import GenreCard from './GenreCard'
 import { useContext } from 'react'
 import { DataContext } from '../DataContext'
+import { Link } from 'react-router-dom'
 
 function Browse({trendingToday, trendingThisWeek, genreArr}) {
     const { imagePath } = useContext(DataContext)
@@ -20,7 +21,9 @@ function Browse({trendingToday, trendingThisWeek, genreArr}) {
                     <h1 className="logo-title-browse">TRAILER</h1>
                 </div>
                 <div className="hamburger">
-                    <img className="hamburger-image" src={hamburger} alt="Navigation Button"/>
+                    <Link to="/navigate">
+                        <img className="hamburger-image" src={hamburger} alt="Navigation Button"/>
+                    </Link>
                 </div>
             </header>
 

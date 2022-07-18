@@ -1,0 +1,89 @@
+.nav-page {
+    background: #8C52FF;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Close navigation button */
+.close-page {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-page-icon {
+    width: 40px;
+    margin: 0px 10px 0px 0px;
+    cursor: pointer;
+}
+
+/* Navigation options */
+.nav-grid {
+    display: grid;
+    grid-template-columns: 80px 197px;
+    justify-content: center;
+}
+
+.nav-box-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-box {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 45px;
+    height: auto;
+}
+
+.nav-text {
+    font-size: 29px;
+    color: white;
+    font-family: 'Archive', sans-serif;
+    cursor: pointer;
+}
+
+/* Navigation attribution */
+.attribution { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 70px;
+}
+
+.tmdb-logo {
+   width: 250px;
+}
+
+.attribution-text {
+    font-family: 'Sifonn Pro';
+    font-size: 14px;
+    line-height: 1.3;
+    color: white;
+    margin-bottom: 0px;
+    width: 250px;
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image-nav {
+    width: 60px;
+}
+
+.logo-title-nav {
+    font-family: 'Archive', sans-serif;
+    font-size: 50px;
+    color: #0FF2F2;
+    margin: 0px;
+}
+
+

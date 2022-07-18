@@ -1,6 +1,10 @@
 .browse {
     background: #362C5D;
     height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Logo and hamburger */
@@ -9,6 +13,7 @@
     align-items: center;
     margin-left: 40px;
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 .logo-browse {
@@ -17,13 +22,13 @@
 
 .logo-image-browse {
     width: 40px;
-    height: auto;
 }
 
 .logo-title-browse {
     font-family: 'Archive', sans-serif;
     font-size: 35px;
     color: #0FF2F2;
+    margin: 0px;
 }
 
 .hamburger {
@@ -34,7 +39,7 @@
 
 .hamburger-image {
     width: 40px;
-    height: auto;
+    /* height: ; */
 }
 
 /* Input box */
@@ -125,17 +130,17 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Genre boxes  (styling continued in Browse.js) */ 
+/* Genre boxes  (styling continued in GenreCard.css) */ 
 .genre-container {
     display: grid;
     grid-template-columns: repeat(2, 150px);
     grid-auto-rows: 100px;
     justify-content: center;
     gap: 10px 10px;
-    height: 320px;
+    height: 38vh;
     overflow: hidden;
     overflow-y: scroll;
-    margin: 0 30px;
+    margin: 0px 30px;
 }
 
 ::-webkit-scrollbar {

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { DataContext } from './DataContext'
 import Home from './components/Home'
 import Browse from './components/Browse'
+import NavMenu from './components/NavMenu'
 
 function App() {
   // provides info on current route location
@@ -74,6 +75,7 @@ function App() {
                 genreArr={genreArr}
               />}
             />
+            <Route path="/navigate" element={<NavMenu/>}/>
           </Routes>
         </DataContext.Provider>
       </AnimatePresence>
