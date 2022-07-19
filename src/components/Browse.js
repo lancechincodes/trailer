@@ -22,16 +22,14 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
         getGenreData(searchOptions.api, searchOptions.key, searchOptions.language, setGenreArr, setLoadingGenre)
       }, [])
 
-    // console.log(loadingToday, loadingWeek, loadingGenre)
-    // if (loadingToday || loadingWeek || loadingGenre) {
-    //     return (
-    //         <div className="loading-page">
-    //             <span className="loader">LOADING</span>
-    //         </div>
-    //     )
-    // }
+    if (loadingToday || loadingWeek || loadingGenre) {
+        return (
+            <div className="loading-page">
+                <span className="loader"></span>
+            </div>
+        )
+    }
     
-    // else {
     return (
         <div className="browse"> 
             {/* Logo and hamburger */}
@@ -68,18 +66,18 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
             <p className="browse-section-title">Popular movies</p>
             <div className="trending-boxes">
                     <div className="trending-box">
-                        <Link to="/browse/trending-today">
+                        <Link className="trending-link" to="/browse/trending-today">
                             <h3 className="trending-text">Trending today</h3>
                             <div className="trending-poster-div">
-                                <img className="trending-poster" src={imagePath + trendingToday} alt="Top trending poster today"/>
+                                {trendingToday && <img className="trending-poster" src={imagePath + trendingToday} alt="Top trending poster today"/>}
                             </div>
                         </Link>
                     </div>
                     <div className="trending-box">
-                        <Link to="/browse/trending-this-week">
+                        <Link className="trending-link" to="/browse/trending-this-week">
                             <h3 className="trending-text">Trending this week</h3>
                             <div className="trending-poster-div">
-                                <img className="trending-poster" src={imagePath + trendingThisWeek} alt="Top trending poster this week"/>
+                                {trendingThisWeek && <img className="trending-poster" src={imagePath + trendingThisWeek} alt="Top trending poster this week"/>}
                             </div>
                         </Link>
                     </div>
@@ -94,7 +92,6 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
             </div>
         </div>
     )
-    // }
 }
 
 export default Browse

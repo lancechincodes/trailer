@@ -7,7 +7,7 @@ export function getTrendingTodayData(api, key, setTrendingToday, setLoadingToday
       setTrendingToday(res.results[0].backdrop_path)
     })
     .catch(err => console.log(err))
-  // setLoadingToday(false)
+  setLoadingToday(false)
 }
 
 export function getTrendingThisWeekData(api, key, setTrendingThisWeek, setLoadingWeek) {
@@ -19,7 +19,7 @@ export function getTrendingThisWeekData(api, key, setTrendingThisWeek, setLoadin
       setTrendingThisWeek(res.results[1].backdrop_path)
     })
     .catch(err => console.log(err))
-  // setLoadingWeek(false)
+  setLoadingWeek(false)
 }
 
 export function getGenreData(api, key, language, setGenreArr, setLoadingGenre) {
@@ -31,7 +31,7 @@ export function getGenreData(api, key, language, setGenreArr, setLoadingGenre) {
       setGenreArr(res.genres)
     })
     .catch(err => console.log(err))
-  // setLoadingGenre(false)
+  setLoadingGenre(false)
 }
 
 export function getPosterForGenreData(api, key, language, id, setGenrePoster, setLoadingGenrePoster) {
@@ -42,5 +42,5 @@ export function getPosterForGenreData(api, key, language, id, setGenrePoster, se
           setGenrePoster(res.results[0].backdrop_path)
       })
       .catch(err => console.log(err))
-  // setLoadingGenrePoster(false)
+  setLoadingGenrePoster(false)
 }

@@ -92,7 +92,7 @@
 
 .trending-boxes {
     display: grid;
-    grid-template-columns: 330px;
+    grid-template-columns: 310px;
     grid-template-rows: repeat(2, 120px);
     justify-content: center;
     margin: 0px 40px;
@@ -106,6 +106,10 @@
     height: 120px;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.trending-link {
+    text-decoration: none;
 }
 
 .trending-text {

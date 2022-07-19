@@ -13,18 +13,20 @@ function GenreCard({id, name}) {
         getPosterForGenreData(searchOptions.api, searchOptions.key, searchOptions.language, id, setGenrePoster, setLoadingGenrePoster)
     }, [])
 
-    // if (loadingGenrePoster) {
-    //     return (
-    //         <p>Loading</p>
-    //     )
-    // }
+    if (loadingGenrePoster) {
+        return (
+            <div className="loading-page">
+                <span className="loader"></span>
+            </div>
+        )
+    }
 
     return (
         <div className="genre-card">
             <Link className="genre-link" to={`/browse/${name.toLowerCase()}`}>
                 <p className="genre-title">{name}</p>
                 <div className="genre-poster-div">
-                        <img className="genre-poster" src={imagePath + genrePoster} alt=""/>
+                        {genrePoster && <img className="genre-poster" src={imagePath + genrePoster} alt=""/>}
                 </div>
             </Link>
         </div>

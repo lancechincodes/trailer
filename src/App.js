@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { DataContext } from './DataContext'
 import Home from './components/Home'
 import Browse from './components/Browse'
@@ -15,6 +15,8 @@ function App() {
   const [trendingToday, setTrendingToday] = useState('')
   const [trendingThisWeek, setTrendingThisWeek] = useState('')
   const [genreArr, setGenreArr] = useState([])
+
+  const [selectedGenre, setSelectedGenre] = useState('')
   const imagePath = 'https://image.tmdb.org/t/p/w500'
   const searchOptions = {
     key: process.env.REACT_APP_TMDB_KEY,
@@ -37,6 +39,8 @@ function App() {
                 setTrendingThisWeek={setTrendingThisWeek}
                 genreArr={genreArr}
                 setGenreArr={setGenreArr}
+                selectedGenre={selectedGenre}
+                setSelectedGenre={setSelectedGenre}
               />}
             />
             <Route path="/navigate" element={<NavMenu/>}/>
