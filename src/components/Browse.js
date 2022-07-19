@@ -54,7 +54,7 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
                     <input 
                         className="input-text"
                         type="text"
-                        placeholder="Search movie or genre"
+                        placeholder="Search movies"
                     />
                 </form>
                 <div className="close-search-icon-div"> 
@@ -66,7 +66,7 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
             <p className="browse-section-title">Popular movies</p>
             <div className="trending-boxes">
                     <div className="trending-box">
-                        <Link className="trending-link" to="/browse/trending-today">
+                        <Link className="trending-link" to="/browse/trending today">
                             <h3 className="trending-text">Trending today</h3>
                             <div className="trending-poster-div">
                                 {trendingToday && <img className="trending-poster" src={imagePath + trendingToday} alt="Top trending poster today"/>}

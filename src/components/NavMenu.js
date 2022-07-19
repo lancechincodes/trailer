@@ -10,7 +10,7 @@ import trending from '../assets/trending.svg'
 import tmdb from '../assets/tmdb.svg'
 import logoImage from '../assets/logo-image.svg'
 
-function NavMenu({ setTypeSearch }) {
+function NavMenu() {
     const navigate = useNavigate()
     
     function handleBack() {

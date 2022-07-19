@@ -6,15 +6,18 @@ import { getGalleryData } from '../utils'
 import { motion } from 'framer-motion'
 import hamburger from '../assets/hamburger.svg'
 import back from '../assets/back.svg'
+import { getGenreData } from '../utils'
 
-function Gallery() {
+function Gallery({genreArr, setGenreArr}) {
     const { genreId } = useParams()
     const { searchOptions, imagePath } = useContext(DataContext)
     const [galleryMovies, setGalleryMovies] = useState([])
-    let url = '';
+    const [loadingGenre, setLoadingGenre] = useState(true)
+    console.log(genreArr)
 
     useEffect(() => {
-        if (genreId === 'trending-today') {
+        let url = '';
+        if (genreId === 'trending today') {
             url = `${searchOptions.api}trending/movie/day?api_key=${searchOptions.key}`
         }
         else if (genreId === 'trending-this-week') {
@@ -29,15 +32,29 @@ function Gallery() {
         else {
             url = `${searchOptions.api}discover/movie?api_key=${searchOptions.key}&${searchOptions.language}sort_by=popularity.desc&page=1&with_genres=${genreId}`
         }
+        
+        // if (genreArr.length === 0) {
+            getGenreData(searchOptions.api, searchOptions.key, searchOptions.language, setGenreArr, setLoadingGenre)
+        // }
         getGalleryData(url, setGalleryMovies)
     }, [])
+
+    if (loadingGenre) {
+        return (
+            <div className="loading-page">
+                <span className="loader"></span>
+            </div>
+        )
+    }
 
     return (
         <div className="gallery-page">
             <div className="gallery-header">
                 <div className="back">
-                    <img className="back-icon" src={back} alt="Back Button"/>
-                    <p className="back-text">Placeholder</p>
+                    <Link to="/browse">
+                        <img className="back-icon" src={back} alt="Back Button"/>
+                    </Link>
+                    <p className="back-text">{genreId}</p>
                 </div>
                 <div className="hamburger">
                     <Link to="/navigate">
@@ -48,13 +65,14 @@ function Gallery() {
             <div className="outer-carousel">
                 <div className="inner-carousel">
                     {galleryMovies.map(movie => (
-                        <div className="poster-box">
-                                <img className="poster-img" key={movie.id} src={imagePath + movie.poster_path} alt="{movie.title}"/>
+                        <div className="poster-box" key={movie.id}>
+                            <img className="poster-img" src={imagePath + movie.poster_path} alt="{movie.title}"/>
                         </div>
                     ))}
                 </div>
             </div>
             <div className="more-movies">
+
 
             </div>
         </div>

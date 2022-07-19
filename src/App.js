@@ -41,7 +41,10 @@ function App() {
               />}
             />
             <Route path="/navigate" element={<NavMenu/>}/>
-            <Route path="/browse/:genreId" element={<Gallery/>}/>
+            <Route path="/browse/:genreId" element={<Gallery
+              genreArr={genreArr}
+              setGenreArr={setGenreArr}
+            />}/>
           </Routes>
         </DataContext.Provider>
       </AnimatePresence>
