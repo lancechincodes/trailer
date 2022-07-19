@@ -23,7 +23,7 @@ function GenreCard({id, name}) {
 
     return (
         <div className="genre-card">
-            <Link className="genre-link" to={`/browse/${name.toLowerCase()}`}>
+            <Link className="genre-link" to={`/browse/${id}`}>
                 <p className="genre-title">{name}</p>
                 <div className="genre-poster-div">
                         {genrePoster && <img className="genre-poster" src={imagePath + genrePoster} alt=""/>}

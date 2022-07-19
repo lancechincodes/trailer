@@ -16,7 +16,6 @@ function App() {
   const [trendingThisWeek, setTrendingThisWeek] = useState('')
   const [genreArr, setGenreArr] = useState([])
 
-  const [selectedGenre, setSelectedGenre] = useState('')
   const imagePath = 'https://image.tmdb.org/t/p/w500'
   const searchOptions = {
     key: process.env.REACT_APP_TMDB_KEY,
@@ -39,12 +38,10 @@ function App() {
                 setTrendingThisWeek={setTrendingThisWeek}
                 genreArr={genreArr}
                 setGenreArr={setGenreArr}
-                selectedGenre={selectedGenre}
-                setSelectedGenre={setSelectedGenre}
               />}
             />
             <Route path="/navigate" element={<NavMenu/>}/>
-            <Route path="/browse/:gallery" element={<Gallery/>}/>
+            <Route path="/browse/:genreId" element={<Gallery/>}/>
           </Routes>
         </DataContext.Provider>
       </AnimatePresence>
