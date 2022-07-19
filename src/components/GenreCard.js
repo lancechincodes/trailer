@@ -26,7 +26,7 @@ function GenreCard({id, name}) {
             <Link className="genre-link" to={`/browse/${id}`}>
                 <p className="genre-title">{name}</p>
                 <div className="genre-poster-div">
-                        {genrePoster && <img className="genre-poster" src={imagePath + genrePoster} alt=""/>}
+                        {genrePoster && <img className="genre-poster" src={imagePath + genrePoster} alt={name}/>}
                 </div>
             </Link>
         </div>

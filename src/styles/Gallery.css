@@ -1,0 +1,65 @@
+.gallery-page {
+    background: #362C5D;
+    height: 100vh;
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.gallery-header {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Back icon */
+.back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.back-icon {
+    width: 25px;
+}
+
+.back-text {
+    font-family: 'Archive';
+    font-size: 25px;
+    color: #0FF2F2;
+}
+
+/* Poster carousel */
+.outer-carousel {
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.inner-carousel {
+    display: flex;
+    align-content: center;
+}
+
+.poster-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+.poster-box:nth-of-type(1) {
+    margin-left: 10vw;
+}
+
+.poster-img { 
+    width: 80vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
