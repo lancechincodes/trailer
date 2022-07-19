@@ -74,7 +74,7 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
                         </Link>
                     </div>
                     <div className="trending-box">
-                        <Link className="trending-link" to="/browse/trending-this-week">
+                        <Link className="trending-link" to="/browse/trending this week">
                             <h3 className="trending-text">Trending this week</h3>
                             <div className="trending-poster-div">
                                 {trendingThisWeek && <img className="trending-poster" src={imagePath + trendingThisWeek} alt="Top trending poster this week"/>}

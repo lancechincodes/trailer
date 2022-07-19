@@ -39,7 +39,7 @@ function NavMenu() {
                     <img className="nav-icon movie-icon" src={movie} alt="Movie icon"/>
                 </div>
                 <div className="nav-box">
-                    <Link className="nav-link" to="/browse/in-theatres">
+                    <Link className="nav-link" to="/browse/in theatres">
                         <motion.h3 whileHover={{scale: 1.2, originX: 0}} className="nav-text">IN THEATRES</motion.h3>
                     </Link>
                 </div>
@@ -47,7 +47,7 @@ function NavMenu() {
                     <img className="nav-icon trending-icon" src={trending} alt="Trending icon"/>
                 </div>
                 <div className="nav-box">
-                    <Link className="nav-link" to="/browse/trending-today">
+                    <Link className="nav-link" to="/browse/trending today">
                         <motion.h3 whileHover={{scale: 1.2, originX: 0}} className="nav-text">TRENDING</motion.h3>
                     </Link>
                 </div>
@@ -55,7 +55,7 @@ function NavMenu() {
                     <img className="nav-icon top-rated-icon" src={topRated} alt="Top rated icon"/>
                 </div>
                 <div className="nav-box">
-                    <Link className="nav-link" to="/browse/top-rated">
+                    <Link className="nav-link" to="/browse/top rated">
                         <motion.h3 whileHover={{scale: 1.2, originX: 0}} className="nav-text">TOP RATED</motion.h3>
                     </Link>
                 </div>
