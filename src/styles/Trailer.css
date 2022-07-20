@@ -37,7 +37,18 @@
     display: flex;
     justify-content: center;
     height: 35vh;
+    width: 95vw;
     margin: 35px 10px;
+    /* margin-right: 10px; */
+    position: relative;
+}
+
+.youtube-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .movie-poster-box {
@@ -160,13 +171,8 @@
 }
 
 .similar-movie-posters {
-    width: 87px;
+    width: 90px;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
 }
-
-/* .similar-movie-posters:last-of-type {
-    display: none;
-} */
-

@@ -23,20 +23,26 @@ function Trailer() {
     const [trailerYoutubeKey, setTrailerYoutubeKey] = useState('')
     const [movieSimilar, setMovieSimilar] = useState([])
 
+    const [loadingMovieData, setLoadingMovieData] = useState(true)
+    const [loadingYoutubeKeyData, setLoadingYoutubeKeyData] = useState(true)
+    const [loadingMovieSimilar, setLoadingMovieSimilar] = useState(true)
+
+    const [showTrailer, setShowTrailer] = useState(false)
+
     const youtubeUrl = "https://www.youtube.com/watch?v="
 
     useEffect(() => {
         // get general data about selected movie
         const url = `${searchOptions.api}/movie/${movieId}?api_key=${searchOptions.key}&${searchOptions.language}`
-        getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoster, setMovieDate, setMovieRating, setMovieTime, setMovieDescription)
+        getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoster, setMovieDate, setMovieRating, setMovieTime, setMovieDescription, setLoadingMovieData)
 
         // get youtube key for selected movie 
         const url2 = `${searchOptions.api}/movie/${movieId}/videos?api_key=${searchOptions.key}&${searchOptions.language}`
-        getYoutubeKeyData(url2, setTrailerYoutubeKey)
+        getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeKeyData)
 
         // get similar movies as selected one
         const url3 = `${searchOptions.api}/movie/${movieId}/similar?api_key=${searchOptions.key}&${searchOptions.language}&page=1`
-        getMovieSimilarData(url3, setMovieSimilar)
+        getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimilar)
     },[])
 
     // console.log(trailerYoutubeKey)
@@ -57,6 +63,14 @@ function Trailer() {
         background: `url(${imagePath}${movieBackdrop}) no-repeat center center`
     }
 
+    if (loadingMovieData || loadingYoutubeKeyData || loadingMovieSimilar) {
+        return (
+            <div className="loading-page">
+                <span className="loader"></span>
+            </div>
+        )
+    }
+
     return (
         <div className="trailer-page">
             <div className="backdrop-box" style={backdropStyles}>
@@ -72,33 +86,48 @@ function Trailer() {
                     </div>
                 </div>
             </div>
-            <div className="movie-box"> 
-                <div className="movie-poster-box">
-                    <img className="movie-poster" src={imagePath + moviePoster} alt={`${movieTitle} Poster`}/>
+            {showTrailer ? (
+                <div className="movie-box"> 
+                    <YouTube 
+                        videoId={trailerYoutubeKey} 
+                        className="youtube-box"     
+                        opts={{
+                            width: "100%",
+                            height: "100%"
+                        }}
+                    />
                 </div>
-                <div className="description-container">
-                    <div className="title-box">
-                        <h3 className="title">{movieTitle}</h3>
+            ) 
+            : (
+                <div className="movie-box"> 
+                    <div className="movie-poster-box">
+                        <img className="movie-poster" src={imagePath + moviePoster} alt={`${movieTitle} Poster`}/>
                     </div>
-                    <div className="date-rating-box">
-                        <p className="movie-year">{movieDate.substring(0,4)}</p>
-                        <div className="tmdb-rating-box">
-                            <p className="tmdb-rating">TMDB: {movieRating}/10</p>
+                    <div className="description-container">
+                        <div className="title-box">
+                            <h3 className="title">{movieTitle}</h3>
+                        </div>
+                        <div className="date-rating-box">
+                            <p className="movie-year">{movieDate.substring(0,4)}</p>
+                            <div className="tmdb-rating-box">
+                                <p className="tmdb-rating">TMDB: {movieRating}/10</p>
+                            </div>
+                        </div>
+                        <div className="trailer-time">
+                            <div className="trailer-button" onClick={() => setShowTrailer(true)}>
+                                <img className="playTrailer" src={playTrailer} alt="Play trailer icon"/>
+                                <p className="trailer-text">Trailer</p>
+                            </div>
+                            {hour !== 0 ? (<p className="movie-time">{hour}h {min}m</p>) 
+                            : (<p className="movie-time">{min}m</p>)}
+                        </div>
+                        <div className="description-box">
+                            <p className="description-text">{movieDescription}</p>
                         </div>
                     </div>
-                    <div className="trailer-time">
-                        <div className="trailer-button">
-                            <img className="playTrailer" src={playTrailer} alt="Play trailer icon"/>
-                            <p className="trailer-text">Trailer</p>
-                        </div>
-                        {hour !== 0 ? (<p className="movie-time">{hour}h {min}m</p>) 
-                        : (<p className="movie-time">{min}m</p>)}
-                    </div>
-                    <div className="description-box">
-                        <p className="description-text">{movieDescription}</p>
-                    </div>
                 </div>
-            </div>
+            )}
+
 
             <p className="recommendation-text">You may also like</p>
             <div className="similar-movies">

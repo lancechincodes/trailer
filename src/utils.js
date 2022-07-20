@@ -69,7 +69,8 @@ export function getGalleryData(url, setGalleryMovies) {
 }
 
 // Request selected movie data 
-export function getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoster, setMovieDate, setMovieRating, setMovieTime, setMovieDescription) {
+export function getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoster, setMovieDate, setMovieRating, setMovieTime, setMovieDescription, setLoadingMovieData) {
+  setLoadingMovieData(true)
   fetch(url) 
     .then(res => res.json())
     .then(res => {
@@ -83,10 +84,14 @@ export function getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoste
       setMovieDescription(res.overview)
     })
     .catch(err => console.log(err))
+    .finally(() => {
+      setLoadingMovieData(false)
+    })
 }
 
 // Request youtube trailer key 
-export function getYoutubeKeyData(url2, setTrailerYoutubeKey) {
+export function getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeKeyData) {
+  setLoadingYoutubeKeyData(true)
   fetch(url2)
     .then(res => res.json())
     .then(res => {
@@ -99,10 +104,14 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey) {
       }
     })
     .catch(err => console.log(err))
+    .finally(() => {
+      setLoadingYoutubeKeyData(false)
+    })
 }
 
 // Request similar movies
-export function getMovieSimilarData(url3, setMovieSimilar) {
+export function getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimilar) {
+  setLoadingMovieSimilar(true)
   fetch(url3) 
     .then(res => res.json())
     .then(res => {
@@ -114,4 +123,7 @@ export function getMovieSimilarData(url3, setMovieSimilar) {
       setMovieSimilar(similarMovieArr)
     })
     .catch(err => console.log(err))
+    .finally(() => {
+      setLoadingMovieSimilar(false)
+    })
 }
