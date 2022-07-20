@@ -6,7 +6,8 @@ import Home from './components/Home'
 import Browse from './components/Browse'
 import NavMenu from './components/NavMenu'
 import Gallery from './components/Gallery'
-import { getTrendingTodayData, getTrendingThisWeekData, getGenreData } from './utils' 
+import Trailer from './components/Trailer'
+// import { getTrendingTodayData, getTrendingThisWeekData, getGenreData } from './utils' 
 
 function App() {
   // provides info on current route location
@@ -45,6 +46,7 @@ function App() {
               genreArr={genreArr}
               setGenreArr={setGenreArr}
             />}/>
+            <Route path="/browse/:genreId/:movie" element={<Trailer/>}/>
           </Routes>
         </DataContext.Provider>
       </AnimatePresence>

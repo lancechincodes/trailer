@@ -1,6 +1,6 @@
 import '../styles/Gallery.css'
-import { useParams, Link } from 'react-router-dom'
-import { useEffect, useContext, useState } from 'react'
+import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useEffect, useContext, useState, useRef } from 'react'
 import { DataContext }from '../DataContext'
 import { getGalleryData } from '../utils'
 import { motion } from 'framer-motion'
@@ -14,6 +14,9 @@ function Gallery({genreArr, setGenreArr}) {
     const [galleryMovies, setGalleryMovies] = useState([])
     const [loadingGenre, setLoadingGenre] = useState(true)
     const [searchOption, setSearchOption] = useState('')
+    const [width, setWidth] = useState(0)
+    const carousel = useRef();
+    const navigate = useNavigate()
 
     useEffect(() => {
         let url = '';
@@ -45,6 +48,16 @@ function Gallery({genreArr, setGenreArr}) {
         }
     }, [genreArr])
 
+    setTimeout(() => {
+        // width of carousel must be total width - width of what it shown (offset)
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth * .95);
+    }, 300)
+
+
+    function handleClick(movieName) {
+        navigate(`/browse/${genreId}/${movieName}`)
+    }
+
     if (loadingGenre) {
         return (
             <div className="loading-page">
@@ -68,14 +81,29 @@ function Gallery({genreArr, setGenreArr}) {
                     </Link>
                 </div>
             </div>
-            <div className="outer-carousel">
-                <div className="inner-carousel">
-                    {galleryMovies.map(movie => (
-                        <div className="poster-box" key={movie.id}>
-                            <img className="poster-img" src={imagePath + movie.poster_path} alt="{movie.title}"/>
-                        </div>
-                    ))}
-                </div>
+            <div className="carousel-container">
+                <motion.div ref={carousel} className="outer-carousel" >
+                    <motion.div 
+                        drag="x" 
+                        dragConstraints={{ right: 0, left: -width }}
+                        className="inner-carousel"
+                    >
+                        {galleryMovies.map(movie => (
+                            <div className="poster-title">
+                                <motion.div className="poster-box" key={movie.id}>
+                                    <motion.img whileHover={{scale: .95}} onClick={() => handleClick(movie.title)} className="poster-img" src={imagePath + movie.poster_path} alt={movie.title}/>
+                                </motion.div>
+                                    <div className="title-box">
+                                        <Link to={`/browse/${genreId}/${movie.title}`}>
+                                         <p className="movie-title">
+                                            {movie.title}
+                                        </p>
+                                        </Link>
+                                    </div>
+                            </div>
+                        ))}
+                    </motion.div>
+                </motion.div>
             </div>
             <div className="more-movies">
 
