@@ -90,7 +90,13 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey) {
   fetch(url2)
     .then(res => res.json())
     .then(res => {
-      console.log(res)
+      // console.log(res)
+      for (let i = 0; i < res.results.length; i++) {
+        if (res.results[i].name.includes("Official Trailer")) {
+          setTrailerYoutubeKey(res.results[i].key)
+          break;
+        }
+      }
     })
     .catch(err => console.log(err))
 }
@@ -100,7 +106,12 @@ export function getMovieSimilarData(url3, setMovieSimilar) {
   fetch(url3) 
     .then(res => res.json())
     .then(res => {
-      console.log(res)
+      // console.log(res)
+      let similarMovieArr = []
+      for (let i = 0; i < 4; i++) {
+        similarMovieArr.push(res.results[i])
+      }
+      setMovieSimilar(similarMovieArr)
     })
     .catch(err => console.log(err))
 }

@@ -9,7 +9,7 @@
 }
 
 .backdrop-box {
-    height: 30vh;
+    height: 33vh;
     background-size: cover;
     position: relative;
 }
@@ -32,3 +32,141 @@
     margin-top: 0;
     padding-top: 20px;
 }
+
+.movie-box {
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+    margin: 35px 10px;
+}
+
+.movie-poster-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65vw;
+}
+
+.movie-poster {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.description-container {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.title-box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+}
+
+.title {
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 10px 0px;
+}
+
+.date-rating-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.movie-year {
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.tmdb-rating {
+    margin: 0;
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.movie-time {
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.trailer-time {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.trailer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    background: #8C52FF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 1px;
+}
+
+.playTrailer {
+    width: 13px;
+    margin-right: 5px;
+}
+
+.trailer-text {
+    font-family: 'Sifonn Pro', sans-serif;
+    color: white;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.description-box {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 13px;
+    overflow-y: scroll;
+    /* margin-left: 0; */
+}
+
+.description-text {
+    margin: 0;
+}
+
+.recommendation-text {
+    font-family: 'Sifonn Pro', sans-serif;
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.similar-movies {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.similar-movie-posters {
+    width: 87px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* .similar-movie-posters:last-of-type {
+    display: none;
+} */
+

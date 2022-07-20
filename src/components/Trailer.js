@@ -2,9 +2,11 @@ import '../styles/Trailer.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import back from '../assets/back.svg'
 import hamburger from '../assets/hamburger.svg'
+import playTrailer from '../assets/play-trailer.svg'
 import { useEffect, useState, useContext } from 'react'
 import { getMovieData, getYoutubeKeyData, getMovieSimilarData } from '../utils'
 import { DataContext } from '../DataContext'
+import YouTube from 'react-youtube'
 
 function Trailer() {
     const { searchOptions, imagePath } = useContext(DataContext)
@@ -19,7 +21,7 @@ function Trailer() {
     const [movieDescription, setMovieDescription] = useState('')
 
     const [trailerYoutubeKey, setTrailerYoutubeKey] = useState('')
-    const [movieSimilar, setMovieSimilar] = useState('')
+    const [movieSimilar, setMovieSimilar] = useState([])
 
     const youtubeUrl = "https://www.youtube.com/watch?v="
 
@@ -35,9 +37,18 @@ function Trailer() {
         // get similar movies as selected one
         const url3 = `${searchOptions.api}/movie/${movieId}/similar?api_key=${searchOptions.key}&${searchOptions.language}&page=1`
         getMovieSimilarData(url3, setMovieSimilar)
-
     },[])
 
+    // console.log(trailerYoutubeKey)
+    // console.log(movieSimilar)
+
+    let min = movieTime
+    let hour = 0
+    while (min > 60) {
+        min -= 60
+        hour++
+    }
+    
     function handleBack() {
         navigate(-1)
     }
@@ -62,38 +73,40 @@ function Trailer() {
                 </div>
             </div>
             <div className="movie-box"> 
-                <div className="poster-box">
+                <div className="movie-poster-box">
                     <img className="movie-poster" src={imagePath + moviePoster} alt={`${movieTitle} Poster`}/>
                 </div>
-                <div className="description-box">
+                <div className="description-container">
                     <div className="title-box">
-                        <h3 className="movie-title">{movieTitle}</h3>
+                        <h3 className="title">{movieTitle}</h3>
                     </div>
                     <div className="date-rating-box">
                         <p className="movie-year">{movieDate.substring(0,4)}</p>
                         <div className="tmdb-rating-box">
-                            <img src="" alt="TMDB Logo"/>
-                            <p className="tmdb-rating">{movieRating}</p>
+                            <p className="tmdb-rating">TMDB: {movieRating}/10</p>
                         </div>
                     </div>
                     <div className="trailer-time">
                         <div className="trailer-button">
-                            <img src="" alt="Play trailer icon"/>
-                            <p>Trailer</p>
+                            <img className="playTrailer" src={playTrailer} alt="Play trailer icon"/>
+                            <p className="trailer-text">Trailer</p>
                         </div>
-                        <div className="time">
-                            <p className="movie-time">{movieTime}</p>
-                        </div>
+                        {hour !== 0 ? (<p className="movie-time">{hour}h {min}m</p>) 
+                        : (<p className="movie-time">{min}m</p>)}
                     </div>
                     <div className="description-box">
-                        <p>{movieDescription}</p>
+                        <p className="description-text">{movieDescription}</p>
                     </div>
                 </div>
             </div>
 
-            <p>You may also like</p>
+            <p className="recommendation-text">You may also like</p>
             <div className="similar-movies">
-            
+                {movieSimilar.map((movie) => (
+                    <Link to={`/browse/${movie.genre_ids[0]}/${movie.id}`} key={movie.id}>
+                        <img className="similar-movie-posters" src={imagePath + movie.poster_path} alt={movie.title}/>
+                    </Link>
+                ))}
             </div>
         </div>
     )
