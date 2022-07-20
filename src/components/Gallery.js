@@ -32,14 +32,13 @@ function Gallery({genreArr, setGenreArr}) {
         else if (genreId === 'top rated') {
             url = `${searchOptions.api}movie/top_rated?api_key=${searchOptions.key}&${searchOptions.language}&page=1`
         }
-        else if (genreId.substring(0,6) === 'SEARCH') {
+        else if (genreId.substring(0,6) === 'search') {
             url = `${searchOptions.api}search/movie?api_key=${searchOptions.key}&${searchOptions.language}&page=1&query=${genreId.substring(6)}`
             setSearch(genreId.substring(6))
         }
         else {
             url = `${searchOptions.api}discover/movie?api_key=${searchOptions.key}&${searchOptions.language}sort_by=popularity.desc&page=1&with_genres=${genreId}`
         }
-        console.log(url)
         getGenreData(searchOptions.api, searchOptions.key, searchOptions.language, setGenreArr, setLoadingGenre)
         getGalleryData(url, setGalleryMovies)
     },[])
@@ -59,8 +58,8 @@ function Gallery({genreArr, setGenreArr}) {
     }, 300)
 
 
-    function handleClick(movieName) {
-        navigate(`/browse/${genreId}/${movieName}`)
+    function handleClick(movieId) {
+        navigate(`/browse/${genreId}/${movieId}`)
     }
 
     if (loadingGenre) {
@@ -94,12 +93,12 @@ function Gallery({genreArr, setGenreArr}) {
                         className="inner-carousel"
                     >
                         {galleryMovies.map(movie => (
-                            <div className="poster-title">
-                                <motion.div className="poster-box" key={movie.id}>
-                                    <motion.img whileHover={{scale: .95}} onClick={() => handleClick(movie.title)} className="poster-img" src={imagePath + movie.poster_path} alt={movie.title}/>
+                            <div className="poster-title" key={movie.id}>
+                                <motion.div className="poster-box">
+                                    <motion.img whileHover={{scale: .95}} onClick={() => handleClick(movie.id)} className="poster-img" src={imagePath + movie.poster_path} alt={movie.title}/>
                                 </motion.div>
                                     <div className="title-box">
-                                        <Link to={`/browse/${genreId}/${movie.title}`}>
+                                        <Link to={`/browse/${genreId}/${movie.id}`}>
                                          <p className="movie-title">
                                             {movie.title}
                                         </p>

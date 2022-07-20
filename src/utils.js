@@ -67,3 +67,15 @@ export function getGalleryData(url, setGalleryMovies) {
     })
     .catch(err => console.log(err))
 }
+
+// Request selected movie data 
+export function getMovieData(url, setMovieBackdrop, setMovieTitle) {
+  fetch(url) 
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+      setMovieBackdrop(res.backdrop_path)
+      setMovieTitle(res.title)
+    })
+    .catch(err => console.log(err))
+}

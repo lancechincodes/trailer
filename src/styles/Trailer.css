@@ -1,0 +1,38 @@
+.trailer-page {
+    background: #362C5D;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.back-icon {
+    cursor: pointer;
+}
+
+.backdrop-box {
+    height: 30vh;
+    background-size: cover;
+    position: relative;
+}
+
+.backdrop-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.3);
+}
+
+.back-text, .back-icon, .hamburger { 
+    position: relative;
+}
+
+.back-text {
+    font-size: 20px;
+}
+
+.gallery-header.trailer {
+    margin-top: 0;
+    padding-top: 20px;
+}

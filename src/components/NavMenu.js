@@ -32,7 +32,7 @@ function NavMenu() {
                 </div>
                 <div className="nav-box">
                     <Link className="nav-link" to="/browse">
-                        <motion.h3 whileHover={{scale: 1.2, originX: 0}} className="nav-text">HOME</motion.h3>
+                        <motion.h3 whileHover={{scale: 1.1, originX: 0}} className="nav-text">HOME</motion.h3>
                     </Link>
                 </div>
                 <div className="nav-box-icon">
@@ -40,7 +40,7 @@ function NavMenu() {
                 </div>
                 <div className="nav-box">
                     <Link className="nav-link" to="/browse/in theatres">
-                        <motion.h3 whileHover={{scale: 1.2, originX: 0}} className="nav-text">IN THEATRES</motion.h3>
+                        <motion.h3 whileHover={{scale: 1.1, originX: 0}} className="nav-text">IN THEATRES</motion.h3>
                     </Link>
                 </div>
                 <div className="nav-box-icon">
@@ -48,7 +48,7 @@ function NavMenu() {
                 </div>
                 <div className="nav-box">
                     <Link className="nav-link" to="/browse/trending today">
-                        <motion.h3 whileHover={{scale: 1.2, originX: 0}} className="nav-text">TRENDING</motion.h3>
+                        <motion.h3 whileHover={{scale: 1.1, originX: 0}} className="nav-text">TRENDING</motion.h3>
                     </Link>
                 </div>
                 <div className="nav-box-icon">
@@ -56,14 +56,14 @@ function NavMenu() {
                 </div>
                 <div className="nav-box">
                     <Link className="nav-link" to="/browse/top rated">
-                        <motion.h3 whileHover={{scale: 1.2, originX: 0}} className="nav-text">TOP RATED</motion.h3>
+                        <motion.h3 whileHover={{scale: 1.1, originX: 0}} className="nav-text">TOP RATED</motion.h3>
                     </Link>
                 </div>
                 <div className="nav-box-icon">
                     <img className="nav-icon surprise-icon" src={surprise} alt="Surprise icon"/>
                 </div>
                 <div className="nav-box">
-                    <motion.h3 whileHover={{scale: 1.2, originX: 0}} className="nav-text">SURPRISE ME</motion.h3>
+                    <motion.h3 whileHover={{scale: 1.1, originX: 0}} className="nav-text">SURPRISE ME</motion.h3>
                 </div>
             </div>
             

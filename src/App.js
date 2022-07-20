@@ -46,7 +46,7 @@ function App() {
               genreArr={genreArr}
               setGenreArr={setGenreArr}
             />}/>
-            <Route path="/browse/:genreId/:movie" element={<Trailer/>}/>
+            <Route path="/browse/:genreId/:movieId" element={<Trailer/>}/>
           </Routes>
         </DataContext.Provider>
       </AnimatePresence>

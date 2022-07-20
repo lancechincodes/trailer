@@ -30,7 +30,11 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
 
     function handleSubmit(event) {
         event.preventDefault()
-        navigate(`/browse/SEARCH${searchString}`)
+        navigate(`/browse/search${searchString}`)
+    }
+
+    function handleDelete(event) {
+        setSearchString('')
     }
 
     if (loadingToday || loadingWeek || loadingGenre) {
@@ -59,7 +63,7 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
             {/* Input box */}
             <div className="input-box">
                 <div className="search-icon-div">
-                    <img className="search-icon" src={search} alt="Search Icon"/>
+                    <img onClick={handleSubmit} className="search-icon" src={search} alt="Search Icon"/>
                 </div>
                 <form type="submit" onSubmit={handleSubmit}>
                     <input 
@@ -71,7 +75,7 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
                     />
                 </form>
                 <div className="close-search-icon-div"> 
-                    <img className="close-search-icon" src={closeSearch} alt="Delete Icon"/>
+                    <img onClick={handleDelete} className="close-search-icon" src={closeSearch} alt="Delete Icon"/>
                 </div>
             </div>
 
