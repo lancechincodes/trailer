@@ -68,8 +68,12 @@
     margin: 5px;
     width: 250px;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Archive', sans-serif;
     font-size: 15px;
+}
+
+.input-text::placeholder {
+    color: rgb(171, 171, 171)
 }
 
 .close-search-icon-div {

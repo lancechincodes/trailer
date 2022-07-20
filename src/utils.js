@@ -69,13 +69,38 @@ export function getGalleryData(url, setGalleryMovies) {
 }
 
 // Request selected movie data 
-export function getMovieData(url, setMovieBackdrop, setMovieTitle) {
+export function getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoster, setMovieDate, setMovieRating, setMovieTime, setMovieDescription) {
   fetch(url) 
     .then(res => res.json())
     .then(res => {
-      console.log(res)
+      // console.log(res)
       setMovieBackdrop(res.backdrop_path)
       setMovieTitle(res.title)
+      setMoviePoster(res.poster_path)
+      setMovieDate(res.release_date)
+      setMovieRating(res.vote_average)
+      setMovieTime(res.runtime)
+      setMovieDescription(res.overview)
+    })
+    .catch(err => console.log(err))
+}
+
+// Request youtube trailer key 
+export function getYoutubeKeyData(url2, setTrailerYoutubeKey) {
+  fetch(url2)
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+    })
+    .catch(err => console.log(err))
+}
+
+// Request similar movies
+export function getMovieSimilarData(url3, setMovieSimilar) {
+  fetch(url3) 
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
     })
     .catch(err => console.log(err))
 }
