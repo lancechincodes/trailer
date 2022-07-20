@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import logoImage from '../assets/logo-image.svg'
 
+// Animation for logo
 const brandVariants = {
     hidden: {
         x: '-100vw'

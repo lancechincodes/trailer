@@ -4,6 +4,7 @@
     overflow: hidden;
 }
 
+/* Backdrop and headings */
 .back-icon {
     cursor: pointer;
 }
@@ -33,13 +34,13 @@
     padding-top: 20px;
 }
 
+/* Trailer and poster/info */
 .movie-box {
     display: flex;
     justify-content: center;
     height: 35vh;
     width: 95vw;
     margin: 35px 10px;
-    /* margin-right: 10px; */
     position: relative;
 }
 
@@ -156,6 +157,7 @@
     margin: 0;
 }
 
+/* Recommendations */
 .recommendation-text {
     font-family: 'Sifonn Pro', sans-serif;
     color: white;

@@ -41,7 +41,10 @@ function App() {
                 setGenreArr={setGenreArr}
               />}
             />
-            <Route path="/navigate" element={<NavMenu/>}/>
+            <Route path="/navigate" element={<NavMenu
+              genreArr={genreArr}
+              setGenreArr={setGenreArr}
+            />}/>
             <Route path="/browse/:genreId" element={<Gallery
               genreArr={genreArr}
               setGenreArr={setGenreArr}

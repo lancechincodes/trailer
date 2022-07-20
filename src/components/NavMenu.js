@@ -9,13 +9,33 @@ import surprise from '../assets/surprise.svg'
 import trending from '../assets/trending.svg'
 import tmdb from '../assets/tmdb.svg'
 import logoImage from '../assets/logo-image.svg'
+import { getGenreData, getRandomMovieId } from '../utils'
+import { useState, useEffect, useContext  } from 'react'
+import { DataContext } from '../DataContext'
 
-function NavMenu() {
+function NavMenu({genreArr, setGenreArr}) {
     const navigate = useNavigate()
-    
+    const { searchOptions } = useContext(DataContext)
+    const [loadingGenre, setLoadingGenre] = useState(true)
+    const [randomGenreId, setRandomGenreId] = useState('')
+    const [randomMovieId, setRandomMovieId] = useState('')
+
     function handleBack() {
         // Passing "-1" as a parameter to go back to previous page
         navigate(-1)
+    }
+
+    useEffect(() => {
+        getGenreData(searchOptions.api, searchOptions.key, searchOptions.language, setGenreArr, setLoadingGenre)
+            .then(() => {
+                let randomGenreIndex = Math.floor(Math.random() * genreArr.length)
+                setRandomGenreId(genreArr[randomGenreIndex].id)
+                getRandomMovieId(searchOptions.api, searchOptions.key, searchOptions.language, randomGenreId, setRandomMovieId)
+            })
+    }, [])
+
+    function handleSurpriseClick() {
+        navigate(`/browse/${randomGenreId}/${randomMovieId}`)
     }
 
     return (
@@ -62,7 +82,7 @@ function NavMenu() {
                 <div className="nav-box-icon">
                     <img className="nav-icon surprise-icon" src={surprise} alt="Surprise icon"/>
                 </div>
-                <div className="nav-box">
+                <div className="nav-box" onClick={handleSurpriseClick}>
                     <motion.h3 whileHover={{scale: 1.1, originX: 0}} className="nav-text">SURPRISE ME</motion.h3>
                 </div>
             </div>

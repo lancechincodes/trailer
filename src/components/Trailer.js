@@ -45,9 +45,7 @@ function Trailer() {
         getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimilar)
     },[])
 
-    // console.log(trailerYoutubeKey)
-    // console.log(movieSimilar)
-
+    // calculate min and hour from total min
     let min = movieTime
     let hour = 0
     while (min > 60) {
@@ -55,6 +53,7 @@ function Trailer() {
         hour++
     }
     
+    // navigate to previous page
     function handleBack() {
         navigate(-1)
     }
@@ -73,6 +72,8 @@ function Trailer() {
 
     return (
         <div className="trailer-page">
+            
+            {/* Backdrop and headings */}
             <div className="backdrop-box" style={backdropStyles}>
                 <div className="gallery-header trailer">
                     <div onClick={handleBack} className="back">
@@ -86,6 +87,8 @@ function Trailer() {
                     </div>
                 </div>
             </div>
+
+            {/* Trailer and poster/info */}
             {showTrailer ? (
                 <div className="movie-box"> 
                     <YouTube 
@@ -128,7 +131,7 @@ function Trailer() {
                 </div>
             )}
 
-
+            {/* Recommendations */}
             <p className="recommendation-text">You may also like</p>
             <div className="similar-movies">
                 {movieSimilar.map((movie) => (

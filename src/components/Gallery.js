@@ -57,7 +57,6 @@ function Gallery({genreArr, setGenreArr}) {
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }, 300)
 
-
     function handleClick(movieId) {
         navigate(`/browse/${genreId}/${movieId}`)
     }

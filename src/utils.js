@@ -32,7 +32,7 @@ export function getTrendingThisWeekData(api, key, setTrendingThisWeek, setLoadin
 export function getGenreData(api, key, language, setGenreArr, setLoadingGenre) {
   setLoadingGenre(true)
   const url = `${api}genre/movie/list?api_key=${key}&${language}`
-  fetch(url)
+  return fetch(url)
     .then(res => res.json())
     .then(res => {
       setGenreArr(res.genres)
@@ -41,6 +41,18 @@ export function getGenreData(api, key, language, setGenreArr, setLoadingGenre) {
     .finally (() => {
       setLoadingGenre(false)
     })
+}
+
+// Request movie id for random genre
+export function getRandomMovieId(api, key, language, id, setRandomMovieId) {
+  const url = `${api}discover/movie?api_key=${key}&${language}sort_by=popularity.desc&page=1&with_genres=${id}`
+  fetch(url)
+      .then(res => res.json())
+      .then(res => {
+          // console.log(res)
+          setRandomMovieId(res.results[Math.floor(Math.random() * 20)].id)
+      })
+      .catch(err => console.log(err))
 }
 
 // Request backdrop posters for each genre
@@ -74,7 +86,6 @@ export function getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoste
   fetch(url) 
     .then(res => res.json())
     .then(res => {
-      // console.log(res)
       setMovieBackdrop(res.backdrop_path)
       setMovieTitle(res.title)
       setMoviePoster(res.poster_path)
@@ -95,7 +106,6 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeK
   fetch(url2)
     .then(res => res.json())
     .then(res => {
-      // console.log(res)
       for (let i = 0; i < res.results.length; i++) {
         if (res.results[i].name.includes("Official Trailer")) {
           setTrailerYoutubeKey(res.results[i].key)
@@ -115,7 +125,6 @@ export function getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimila
   fetch(url3) 
     .then(res => res.json())
     .then(res => {
-      // console.log(res)
       let similarMovieArr = []
       for (let i = 0; i < 4; i++) {
         similarMovieArr.push(res.results[i])
