@@ -7,7 +7,7 @@ import closeSearch from '../assets/close-search.svg'
 import GenreCard from './GenreCard'
 import { useContext, useState, useEffect } from 'react'
 import { DataContext } from '../DataContext'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { getTrendingTodayData, getTrendingThisWeekData, getGenreData } from '../utils' 
 
 function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingThisWeek, genreArr, setGenreArr}) {
@@ -15,12 +15,23 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
     const [loadingToday, setLoadingToday] = useState(true)
     const [loadingWeek, setLoadingWeek] = useState(true)
     const [loadingGenre, setLoadingGenre] = useState(true)
+    const [searchString, setSearchString] = useState('')
+    const navigate = useNavigate()
 
     useEffect(() => {
         getTrendingTodayData(searchOptions.api, searchOptions.key, setTrendingToday, setLoadingToday)
         getTrendingThisWeekData(searchOptions.api, searchOptions.key, setTrendingThisWeek, setLoadingWeek)
         getGenreData(searchOptions.api, searchOptions.key, searchOptions.language, setGenreArr, setLoadingGenre)
       }, [])
+
+    function handleChange(event) {
+        setSearchString(event.target.value)
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        navigate(`/browse/SEARCH${searchString}`)
+    }
 
     if (loadingToday || loadingWeek || loadingGenre) {
         return (
@@ -50,11 +61,13 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
                 <div className="search-icon-div">
                     <img className="search-icon" src={search} alt="Search Icon"/>
                 </div>
-                <form type="submit">
+                <form type="submit" onSubmit={handleSubmit}>
                     <input 
                         className="input-text"
                         type="text"
                         placeholder="Search movies"
+                        value={searchString}
+                        onChange={handleChange}
                     />
                 </form>
                 <div className="close-search-icon-div"> 

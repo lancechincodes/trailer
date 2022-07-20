@@ -13,9 +13,9 @@ function Gallery({genreArr, setGenreArr}) {
     const { searchOptions, imagePath } = useContext(DataContext)
     const [galleryMovies, setGalleryMovies] = useState([])
     const [loadingGenre, setLoadingGenre] = useState(true)
-    const [searchOption, setSearchOption] = useState('')
+    const [search, setSearch] = useState('')
     const [width, setWidth] = useState(0)
-    const carousel = useRef();
+    const carousel = useRef()
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -32,9 +32,14 @@ function Gallery({genreArr, setGenreArr}) {
         else if (genreId === 'top rated') {
             url = `${searchOptions.api}movie/top_rated?api_key=${searchOptions.key}&${searchOptions.language}&page=1`
         }
+        else if (genreId.substring(0,6) === 'SEARCH') {
+            url = `${searchOptions.api}search/movie?api_key=${searchOptions.key}&${searchOptions.language}&page=1&query=${genreId.substring(6)}`
+            setSearch(genreId.substring(6))
+        }
         else {
             url = `${searchOptions.api}discover/movie?api_key=${searchOptions.key}&${searchOptions.language}sort_by=popularity.desc&page=1&with_genres=${genreId}`
         }
+        console.log(url)
         getGenreData(searchOptions.api, searchOptions.key, searchOptions.language, setGenreArr, setLoadingGenre)
         getGalleryData(url, setGalleryMovies)
     },[])
@@ -43,14 +48,14 @@ function Gallery({genreArr, setGenreArr}) {
     useEffect(() => {
         for (let i = 0; i < genreArr.length; i++) {
             if (genreArr[i].id === parseInt(genreId)) {
-                setSearchOption(genreArr[i].name)
+                setSearch(genreArr[i].name)
             }
         }
     }, [genreArr])
 
     setTimeout(() => {
         // width of carousel must be total width - width of what it shown (offset)
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth * .95);
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }, 300)
 
 
@@ -73,7 +78,7 @@ function Gallery({genreArr, setGenreArr}) {
                     <Link to="/browse">
                         <img className="back-icon" src={back} alt="Back Button"/>
                     </Link>
-                    <p className="back-text">{searchOption ? searchOption : genreId}</p>
+                    <p className="back-text">{search ? search : genreId}</p>
                 </div>
                 <div className="hamburger">
                     <Link to="/navigate">
