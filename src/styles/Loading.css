@@ -38,20 +38,32 @@
 
 /***********LEVEL 3***********/ 
 @media screen and (min-width: 513px) and (max-width: 768px) {
-
+  .loader {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 /***********LEVEL 4***********/ 
 @media screen and (min-width: 769px) and (max-width: 960px) {
-
+  .loader {
+    width: 56px;
+    height: 56px;
+  }
 }
 
 /***********LEVEL 5***********/ 
 @media screen and (min-width: 961px) and (max-width: 1280px){
-
+  .loader {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /***********LEVEL 6***********/ 
 @media screen and (min-width: 1281px) {
- 
+  .loader {
+    width: 64px;
+    height: 64px;
+  }
 }
