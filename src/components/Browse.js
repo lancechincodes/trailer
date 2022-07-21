@@ -57,7 +57,7 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
                     </div>
                     <div className="hamburger">
                         <Link to="/navigate">
-                            <img className="hamburger-image" src={hamburger} alt="Navigation Button"/>
+                            <motion.img className="hamburger-image" src={hamburger} alt="Navigation Button" whileHover={{scale: .9}}/>
                         </Link>
                     </div>
                 </header>

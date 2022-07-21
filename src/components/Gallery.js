@@ -74,13 +74,13 @@ function Gallery({genreArr, setGenreArr}) {
             <div className="gallery-header">
                 <div className="back">
                     <Link to="/browse">
-                        <img className="back-icon" src={back} alt="Back Button"/>
+                        <motion.img className="back-icon" src={back} alt="Back Button" whileHover={{scale: .9}}/>
                     </Link>
                     <p className="back-text">{search ? search : genreId}</p>
                 </div>
                 <div className="hamburger">
                     <Link to="/navigate">
-                        <img className="hamburger-image" src={hamburger} alt="Navigation Button"/>
+                        <motion.img className="hamburger-image" src={hamburger} alt="Navigation Button" whileHover={{scale: .9}}/>
                     </Link>
                 </div>
             </div>

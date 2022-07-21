@@ -89,3 +89,63 @@
     color: #0FF2F2;
     width: 60vw;
 } */
+
+/***********LEVEL 3***********/ 
+@media screen and (min-width: 513px) and (max-width: 768px) {
+    .back-icon {
+        width: 26px;
+    }
+    
+    .back-text {
+        font-size: 20px;
+    }
+
+    .hamburger-image {
+        width: 41px;
+    }
+}
+
+/***********LEVEL 4***********/ 
+@media screen and (min-width: 769px) and (max-width: 960px) {
+    .back-icon {
+        width: 27px;
+    }
+    
+    .back-text {
+        font-size: 22px;
+    }
+
+    .hamburger-image {
+        width: 42px;
+    }
+}
+
+/***********LEVEL 5***********/ 
+@media screen and (min-width: 961px) and (max-width: 1280px){
+    .back-icon {
+        width: 28px;
+    }
+    
+    .back-text {
+        font-size: 24px;
+    }
+
+    .hamburger-image {
+        width: 43px;
+    }
+}
+
+/***********LEVEL 6***********/ 
+@media screen and (min-width: 1281px) {
+    .back-icon {
+        width: 29px;
+    }
+    
+    .back-text {
+        font-size: 26px;
+    }
+
+    .hamburger-image {
+        width: 44px;
+    }
+}
