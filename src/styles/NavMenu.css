@@ -1,6 +1,6 @@
 /***********LEVEL 2***********/
 .nav-page {
-    background: #8C52FF;
+    background: #362C5D;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -93,20 +93,28 @@
 
 /***********LEVEL 3***********/ 
 @media screen and (min-width: 513px) and (max-width: 768px) {
-
+    .close-page-icon {
+        width: 41px;
+    }
 }
 
 /***********LEVEL 4***********/ 
 @media screen and (min-width: 769px) and (max-width: 960px) {
-
+    .close-page-icon {
+        width: 42px;
+    }
 }
 
 /***********LEVEL 5***********/ 
 @media screen and (min-width: 961px) and (max-width: 1280px){
-
+    .close-page-icon {
+        width: 43px;
+    }
 }
 
 /***********LEVEL 6***********/ 
 @media screen and (min-width: 1281px) {
- 
+    .close-page-icon {
+        width: 44px;
+    }
 }

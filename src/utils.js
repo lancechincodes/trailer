@@ -70,13 +70,17 @@ export function getPosterForGenreData(api, key, language, id, setGenrePoster, se
 }
 
 // Request gallery data 
-export function getGalleryData(url, setGalleryMovies) {
+export function getGalleryData(url, setGalleryMovies, setLoadingGallery) {
+  setLoadingGallery(true)
   fetch(url)
     .then(res => res.json())
     .then(res => {
       setGalleryMovies(res.results)
     })
     .catch(err => console.log(err))
+    .finally(() => {
+      setLoadingGallery(false)
+    })
 }
 
 // Request selected movie data 

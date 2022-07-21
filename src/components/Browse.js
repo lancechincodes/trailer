@@ -31,7 +31,9 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
 
     function handleSubmit(event) {
         event.preventDefault()
-        navigate(`/browse/search${searchString}`)
+        if (searchString !== '') {
+            navigate(`/browse/search${searchString}`)
+        }
     }
 
     function handleDelete(event) {

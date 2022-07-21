@@ -3,6 +3,7 @@
     background: #362C5D;
     height: 100vh;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .gallery-header {
@@ -90,6 +91,21 @@
     width: 60vw;
 } */
 
+.not-found {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 40px;
+}
+
+.not-found-text {
+    font-family: 'Archive', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
 /***********LEVEL 3***********/ 
 @media screen and (min-width: 513px) and (max-width: 768px) {
     .back-icon {
@@ -102,6 +118,10 @@
 
     .hamburger-image {
         width: 41px;
+    }
+
+    .not-found-text {
+        font-size: 22px;
     }
 }
 
@@ -118,6 +138,10 @@
     .hamburger-image {
         width: 42px;
     }
+
+    .not-found-text {
+        font-size: 24px;
+    }
 }
 
 /***********LEVEL 5***********/ 
@@ -133,6 +157,10 @@
     .hamburger-image {
         width: 43px;
     }
+
+    .not-found-text {
+        font-size: 26px;
+    }
 }
 
 /***********LEVEL 6***********/ 
@@ -147,5 +175,9 @@
 
     .hamburger-image {
         width: 44px;
+    }
+
+    .not-found-text {
+        font-size: 28px;
     }
 }
