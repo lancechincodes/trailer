@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { DataContext } from '../DataContext'
 import { getPosterForGenreData } from '../utils'
+import { motion } from 'framer-motion'
 
 function GenreCard({id, name}) {
     const { searchOptions, imagePath } = useContext(DataContext)
@@ -22,14 +23,14 @@ function GenreCard({id, name}) {
     }
 
     return (
-        <div className="genre-card">
+        <motion.div className="genre-card" whileHover={{scale: .98}}>
             <Link className="genre-link" to={`/browse/${id}`}>
                 <p className="genre-title">{name}</p>
                 <div className="genre-poster-div">
                         {genrePoster && <img className="genre-poster" src={imagePath + genrePoster} alt={name}/>}
                 </div>
             </Link>
-        </div>
+        </motion.div>
     )
 }
 

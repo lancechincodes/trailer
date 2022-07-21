@@ -49,7 +49,6 @@ export function getRandomMovieId(api, key, language, id, setRandomMovieId) {
   fetch(url)
       .then(res => res.json())
       .then(res => {
-          // console.log(res)
           setRandomMovieId(res.results[Math.floor(Math.random() * 20)].id)
       })
       .catch(err => console.log(err))

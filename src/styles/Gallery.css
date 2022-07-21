@@ -1,3 +1,4 @@
+/***********LEVEL 2***********/
 .gallery-page {
     background: #362C5D;
     height: 100vh;
@@ -35,10 +36,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 19px;
     height: 100vh;
+    margin: 0 19px;
 }
-
 
 .outer-carousel {
     height: 75vh;
@@ -52,33 +52,40 @@
     justify-content: flex-start;
 }
 
+.poster-title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .poster-box {
     display: flex;
     justify-content: flex-start;
     padding: 0px;
-    margin-right: 10vw;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .poster-box:nth-of-type(1) {
-    margin-left: 5vw;
+    margin-left: 20px;
 }
 
 .poster-img { 
-    width: 80vw;
+    width: 330px;
     height: auto;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.title-box {
+/* .title-box {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .movie-title {
     font-family: 'Archive';
     font-size: 18px;
     color: #0FF2F2;
-    width: 80vw;
-    text-align: center;
-}
+    width: 60vw;
+} */

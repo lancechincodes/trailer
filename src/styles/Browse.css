@@ -1,3 +1,4 @@
+/***********LEVEL 2***********/
 .browse {
     background: #362C5D;
     height: 100vh;
@@ -98,7 +99,7 @@
 
 .trending-boxes {
     display: grid;
-    grid-template-columns: 310px;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 120px);
     justify-content: center;
     margin: 0px 40px;
@@ -146,14 +147,14 @@
 /* Genre boxes  (styling continued in GenreCard.css) */ 
 .genre-container {
     display: grid;
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 100px;
     justify-content: center;
     gap: 10px 10px;
     height: 38vh;
     overflow: hidden;
     overflow-y: scroll;
-    margin: 0px 30px;
+    margin: 0px 40px;
 }
 
 ::-webkit-scrollbar {
@@ -163,4 +164,248 @@
 ::-webkit-scrollbar-thumb {
     background: #0FF2F2;
     border-radius: 100vw;
+}
+
+/***********LEVEL 3***********/ 
+@media screen and (min-width: 513px) and (max-width: 768px) {
+    .trending-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 170px;
+        gap: 10px 10px;
+    }
+
+    .trending-box {
+        height: 170px;
+    }
+
+    .trending-poster {
+        margin-top: 55px;
+        width: 85px;
+        height: 85px;
+    }
+
+    .browse-section-title {
+        font-size: 18px;
+    }
+
+    .genre-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 120px;
+    }
+
+    .trending-text {
+        font-size: 21px;
+    }
+    
+    .input-box {
+        width: 300px;
+    }
+        
+    .search-icon {
+        width: 16px;
+    }
+    
+    .input-text {
+        width: 250px;
+        font-size: 16px;
+    }
+    
+    .close-search-icon {
+        width: 13px; 
+    }
+
+    .logo-image-browse {
+        width: 41px;
+    }
+    
+    .logo-title-browse {
+        font-size: 36px;
+    }
+        
+    .hamburger-image {
+        width: 41px;
+    }
+}
+
+/***********LEVEL 4***********/ 
+@media screen and (min-width: 769px) and (max-width: 960px) {
+    .trending-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 175px;
+        gap: 10px 10px;
+    }
+
+    .trending-box {
+        height: 175px;
+    }
+
+    .trending-poster {
+        margin-top: 55px;
+        width: 85px;
+        height: 85px;
+    }
+
+    .browse-section-title {
+        font-size: 18px;
+    }
+
+    .genre-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 125px;
+    }
+
+    .trending-text {
+        font-size: 21px;
+    }
+
+    .input-box {
+        width: 310px;
+    }
+        
+    .search-icon {
+        width: 17px;
+    }
+    
+    .input-text {
+        width: 260px;
+        font-size: 17px;
+    }
+    
+    .close-search-icon {
+        width: 14px; 
+    }
+
+    .logo-image-browse {
+        width: 42px;
+    }
+    
+    .logo-title-browse {
+        font-size: 37px;
+    }
+        
+    .hamburger-image {
+        width: 42px;
+    }
+}
+
+/***********LEVEL 5***********/ 
+@media screen and (min-width: 961px) and (max-width: 1280px){
+    .trending-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 180px;
+        gap: 10px 10px;
+    }
+
+    .trending-box {
+        height: 180px;
+    }
+
+    .trending-poster {
+        margin-top: 45px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .browse-section-title {
+        font-size: 20px;
+    }
+
+    .genre-container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 130px;
+    }
+
+    .trending-text {
+        font-size: 24px;
+    }
+
+    .input-box {
+        width: 320px;
+    }
+        
+    .search-icon {
+        width: 17px;
+    }
+    
+    .input-text {
+        width: 270px;
+        font-size: 18px;
+    }
+    
+    .close-search-icon {
+        width: 15px; 
+    }
+
+    .logo-image-browse {
+        width: 43px;
+    }
+    
+    .logo-title-browse {
+        font-size: 38px;
+    }
+        
+    .hamburger-image {
+        width: 43px;
+    }
+}
+
+/***********LEVEL 6***********/ 
+@media screen and (min-width: 1281px) {
+    .trending-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 185px;
+        gap: 10px 10px;
+    }
+
+    .trending-box {
+        height: 185px;
+    }
+
+    .trending-poster {
+        margin-top: 30px;
+        width: 115px;
+        height: 115px;
+    }
+
+    .browse-section-title {
+        font-size: 22px;
+    }
+
+    .genre-container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 135px;
+    }
+
+    .trending-text {
+        font-size: 26px;
+    }
+
+    .input-box {
+        width: 330px;
+    }
+        
+    .search-icon {
+        width: 18px;
+    }
+    
+    .input-text {
+        width: 280px;
+        font-size: 19px;
+    }
+    
+    .close-search-icon {
+        width: 16px; 
+    }
+
+    .logo-image-browse {
+        width: 44px;
+    }
+    
+    .logo-title-browse {
+        font-size: 39px;
+    }
+        
+    .hamburger-image {
+        width: 44px;
+    }
 }

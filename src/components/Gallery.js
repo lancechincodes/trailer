@@ -93,24 +93,22 @@ function Gallery({genreArr, setGenreArr}) {
                     >
                         {galleryMovies.map(movie => (
                             <div className="poster-title" key={movie.id}>
-                                <motion.div className="poster-box">
-                                    <motion.img whileHover={{scale: .95}} onClick={() => handleClick(movie.id)} className="poster-img" src={imagePath + movie.poster_path} alt={movie.title}/>
-                                </motion.div>
-                                    <div className="title-box">
+                                <div className="poster-title-div">
+                                    <motion.div className="poster-box">
+                                        <motion.img whileHover={{scale: .95}} onClick={() => handleClick(movie.id)} className="poster-img" src={imagePath + movie.poster_path} alt={movie.title}/>
+                                    </motion.div>
+                                    {/* <div className="title-box">
                                         <Link to={`/browse/${genreId}/${movie.id}`}>
-                                         <p className="movie-title">
+                                        <p className="movie-title">
                                             {movie.title}
                                         </p>
                                         </Link>
-                                    </div>
+                                    </div> */}
+                                </div>
                             </div>
                         ))}
                     </motion.div>
                 </motion.div>
-            </div>
-            <div className="more-movies">
-
-
             </div>
         </div>
     )

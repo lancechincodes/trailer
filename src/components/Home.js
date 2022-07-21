@@ -36,7 +36,7 @@ function Home() {
 
     setTimeout(()=> {
         navigate("/browse")
-    }, 3000)
+    }, 3250)
 
     return (
         <div className="home">
