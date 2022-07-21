@@ -89,6 +89,7 @@ export function getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoste
   fetch(url) 
     .then(res => res.json())
     .then(res => {
+      console.log(res)
       setMovieBackdrop(res.backdrop_path)
       setMovieTitle(res.title)
       setMoviePoster(res.poster_path)
@@ -129,7 +130,7 @@ export function getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimila
     .then(res => res.json())
     .then(res => {
       let similarMovieArr = []
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 8; i++) {
         similarMovieArr.push(res.results[i])
       }
       setMovieSimilar(similarMovieArr)

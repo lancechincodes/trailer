@@ -102,9 +102,14 @@ function NavMenu({genreArr, setGenreArr}) {
             </div>
 
             {/* Trailer Logo  */}
-            <div className="logo-nav">
-                    <img className="logo-image-nav" src={logoImage} alt="Trailer Logo"/>
-                    <h1 className="logo-title-nav">TRAILER</h1>
+            <div className="trailer-lance">
+                <div className="logo-nav">
+                        <img className="logo-image-nav" src={logoImage} alt="Trailer Logo"/>
+                        <h1 className="logo-title-nav">TRAILER</h1>
+                </div>
+                <div className="developed-by">
+                    <p className="lance">Developed by Lance Chin</p>
+                </div>
             </div>
         </div>
     )

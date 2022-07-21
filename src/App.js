@@ -17,7 +17,7 @@ function App() {
   const [trendingThisWeek, setTrendingThisWeek] = useState('')
   const [genreArr, setGenreArr] = useState([])
 
-  const imagePath = 'https://image.tmdb.org/t/p/w500'
+  const imagePath = 'https://image.tmdb.org/t/p/original'
   const searchOptions = {
     key: process.env.REACT_APP_TMDB_KEY,
     api: "https://api.themoviedb.org/3/",
