@@ -38,6 +38,12 @@ function NavMenu({genreArr, setGenreArr}) {
         navigate(`/browse/${randomGenreId}/${randomMovieId}`)
     }
 
+    if (loadingGenre) {
+        <div className="loading-page">
+            <span className="loader"></span>
+        </div>
+    }
+
     return (
         <div className="nav-page">
             {/* Close navigation button */}
