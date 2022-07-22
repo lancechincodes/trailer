@@ -39,7 +39,6 @@
     display: flex;
     justify-content: flex-start;
     height: 325px;
-    /* width: 95vw; */
     margin: 10px;
     position: relative;
 }
@@ -69,7 +68,6 @@
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 
 .title-box {
@@ -778,5 +776,52 @@
 
 /***********LEVEL 1***********/
 @media screen and (max-width: 400px) and (max-height: 700px) {
+    .backdrop-box {
+        height: 220px;
+        position: relative;
+    }
+
+    .movie-box {
+        height: 250px;
+    }
+
+    .movie-poster {
+        width: 160px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
     
+    .movie-year {
+        font-size: 14px;
+    }
+    
+    .tmdb-rating {
+        font-size: 14px;
+    }
+    
+    .movie-time {
+        font-size: 14px;
+    }
+    
+    .trailer-button {
+        height: 24px;
+    }
+    
+    .play-trailer {
+        width: 10px;
+    }
+    
+    .trailer-text {
+        padding-top: 2px;
+    }
+    
+    .description-box {
+        font-size: 14px;
+    }
+
+    .recommendation-text {
+        font-size: 14px;
+    }
 }

@@ -110,9 +110,9 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeK
   fetch(url2)
     .then(res => res.json())
     .then(res => {
-      // console.log(res)
+      console.log(res)
       let filteredRes = res.results.filter((vid) => vid.type === "Trailer")
-      // console.log(filteredRes)
+      console.log(filteredRes)
       let found = false
       for (let i = 0; i < filteredRes.length; i++) {
         if (filteredRes[i].name.includes("Official Trailer")) {
