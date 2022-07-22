@@ -133,10 +133,10 @@ function Trailer() {
                                 </div>
                             </div>
                             <div className="trailer-time">
-                                <motion.div ref={trailerBtnDiv} className="trailer-button" onClick={() => setShowTrailer(true)} whileHover={{scale: .96}}>
+                                <motion.button ref={trailerBtnDiv} className="trailer-button" onClick={() => setShowTrailer(true)} whileHover={{scale: .95}}>
                                     <img ref={trailerBtnSymbol} className="play-trailer" src={playTrailer} alt="Play trailer icon"/>
                                     <p ref={trailerBtnText} className="trailer-text">Trailer</p>
-                                </motion.div>
+                                </motion.button>
                                 {hour !== 0 ? (<p className="movie-time">{hour}h {min}m</p>) 
                                 : (<p className="movie-time">{min}m</p>)}
                             </div>
@@ -148,7 +148,7 @@ function Trailer() {
                                 <div className="similar-movies">
                                     {movieSimilar.map((movie) => (
                                         <Link className="similar-movie-posters-link" to={`/browse/${movie.genre_ids[0]}/${movie.id}`} key={movie.id}>
-                                            <motion.img className="similar-movie-posters" src={imagePath + movie.poster_path} alt={movie.title} whileHover={{scale: .98}}/>
+                                            <motion.img className="similar-movie-posters" src={imagePath + movie.poster_path} alt={movie.title} whileHover={{scale: .95}}/>
                                         </Link>
                                     ))}
                                 </div>

@@ -23,7 +23,7 @@ function GenreCard({id, name}) {
     }
 
     return (
-        <motion.div className="genre-card" whileHover={{scale: .98}}>
+        <motion.div className="genre-card" whileHover={{scale: .97}}>
             <Link className="genre-link" to={`/browse/${id}`}>
                 <p className="genre-title">{name}</p>
                 <div className="genre-poster-div">
