@@ -1,0 +1,191 @@
+/***********LEVEL 2***********/
+.gallery-page {
+    background: #362C5D;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.gallery-header {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Back icon */
+.back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.back-icon {
+    width: 25px;
+}
+
+.back-text {
+    font-family: 'Archive';
+    font-size: 18px;
+    color: #0FF2F2;
+}
+
+/* Poster carousel */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 19px;
+}
+
+.outer-carousel {
+    height: 75vh;
+    cursor: grab;
+    overflow: hidden;
+}
+
+.inner-carousel {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.poster-title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poster-box {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.poster-box:nth-of-type(1) {
+    margin-left: 20px;
+}
+
+.poster-img { 
+    width: 330px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .title-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.movie-title {
+    font-family: 'Archive';
+    font-size: 18px;
+    color: #0FF2F2;
+    width: 60vw;
+} */
+
+.not-found {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 40px;
+}
+
+.not-found-text {
+    font-family: 'Archive', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+/***********LEVEL 3***********/ 
+@media screen and (min-width: 513px) and (max-width: 768px) {
+    .back-icon {
+        width: 26px;
+    }
+    
+    .back-text {
+        font-size: 20px;
+    }
+
+    .hamburger-image {
+        width: 41px;
+    }
+
+    .not-found-text {
+        font-size: 22px;
+    }
+}
+
+/***********LEVEL 4***********/ 
+@media screen and (min-width: 769px) and (max-width: 960px) {
+    .back-icon {
+        width: 27px;
+    }
+    
+    .back-text {
+        font-size: 22px;
+    }
+
+    .hamburger-image {
+        width: 42px;
+    }
+
+    .not-found-text {
+        font-size: 24px;
+    }
+}
+
+/***********LEVEL 5***********/ 
+@media screen and (min-width: 961px) and (max-width: 1280px){
+    .back-icon {
+        width: 28px;
+    }
+    
+    .back-text {
+        font-size: 24px;
+    }
+
+    .hamburger-image {
+        width: 43px;
+    }
+
+    .not-found-text {
+        font-size: 26px;
+    }
+}
+
+/***********LEVEL 6***********/ 
+@media screen and (min-width: 1281px) {
+    .back-icon {
+        width: 29px;
+    }
+    
+    .back-text {
+        font-size: 26px;
+    }
+
+    .hamburger-image {
+        width: 44px;
+    }
+
+    .not-found-text {
+        font-size: 28px;
+    }
+}
+
+/***********LEVEL 1***********/
+@media screen and (max-width: 400px) and (max-height: 700px) {
+    .poster-img { 
+        width: 290px;
+    }
+}

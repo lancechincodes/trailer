@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Archive';
+  src: url('./fonts/Archive.woff2') format('woff2'),
+      url('./fonts/Archive.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sifonn Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Sifonn Pro'), url('./fonts/SIFONN_PRO.woff') format('woff');
+  }

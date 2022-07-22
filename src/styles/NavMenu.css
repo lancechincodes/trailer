@@ -1,0 +1,162 @@
+/***********LEVEL 2***********/
+.nav-page {
+    background: #362C5D;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Close navigation button */
+.close-page {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-page-icon {
+    width: 40px;
+    margin: 0px 40px 0px 0px;
+    cursor: pointer;
+}
+
+/* Navigation options */
+.nav-grid {
+    display: grid;
+    grid-template-columns: 80px 197px;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-box-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-box {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 45px;
+    height: auto;
+}
+
+.nav-text {
+    font-size: 29px;
+    color: white;
+    font-family: 'Archive', sans-serif;
+    cursor: pointer;
+}
+
+/* Navigation attribution */
+.attribution { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 70px;
+}
+
+.tmdb-logo {
+   width: 250px;
+}
+
+.attribution-text {
+    font-family: 'Sifonn Pro';
+    font-size: 15px;
+    line-height: 1.3;
+    color: white;
+    margin-bottom: 0px;
+    width: 260px;
+    margin-top: 5px;
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image-nav {
+    width: 60px;
+}
+
+.logo-title-nav {
+    font-family: 'Archive', sans-serif;
+    font-size: 50px;
+    color: #0FF2F2;
+    margin: 0px;
+}
+
+.developed-by {
+    display: flex;
+    justify-content: center;
+}
+
+.lance {
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 15px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/***********LEVEL 3***********/ 
+@media screen and (min-width: 513px) and (max-width: 768px) {
+    .close-page-icon {
+        width: 41px;
+    }
+}
+
+/***********LEVEL 4***********/ 
+@media screen and (min-width: 769px) and (max-width: 960px) {
+    .close-page-icon {
+        width: 42px;
+    }
+}
+
+/***********LEVEL 5***********/ 
+@media screen and (min-width: 961px) and (max-width: 1280px){
+    .close-page-icon {
+        width: 43px;
+    }
+}
+
+/***********LEVEL 6***********/ 
+@media screen and (min-width: 1281px) {
+    .close-page-icon {
+        width: 44px;
+    }
+}
+
+/***********LEVEL 1***********/
+@media screen and (max-width: 400px) and (max-height: 700px) {
+    .nav-text {
+        font-size: 24px;
+    }
+
+    .tmdb-logo {
+        width: 160px;
+     }
+
+     .attribution-text {
+        font-size: 12px;
+        width: 220px;
+     }
+
+     .logo-image-nav {
+        width: 35px;
+    }
+    
+    .logo-title-nav {
+        font-size: 29.167px;
+    }
+
+    .lance {
+        font-size: 12px;
+    }
+}

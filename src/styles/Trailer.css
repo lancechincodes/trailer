@@ -1,0 +1,827 @@
+/***********LEVEL 2***********/
+.trailer-page {
+    background: #362C5D;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Backdrop and headings */
+.back-icon {
+    cursor: pointer;
+}
+
+.backdrop-box {
+    height: 290px;
+    position: relative;
+}
+
+.backdrop-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.3);
+}
+
+.back-text, .back-icon, .hamburger { 
+    position: relative;
+}
+
+.gallery-header.trailer {
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+/* Trailer and poster/info */
+.movie-box {
+    display: flex;
+    justify-content: flex-start;
+    height: 325px;
+    margin: 10px;
+    position: relative;
+}
+
+.youtube-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.movie-poster-box {
+    display: flex;
+    align-items: center;
+}
+
+.movie-poster {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.description-container {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+}
+
+.title {
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 26px;
+    color: white;
+    margin: 10px 0px;
+}
+
+.date-rating-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.movie-year {
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.tmdb-rating {
+    margin: 0;
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.movie-time {
+    font-family: 'Sifonn Pro', sans-serif;
+    font-size: 14px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.trailer-time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center ;
+}
+
+.trailer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    background: #8C52FF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 1px;
+    cursor: pointer;
+    height: 27px;
+}
+
+.play-trailer {
+    width: 12px;
+    margin-right: 5px;
+}
+
+.trailer-text {
+    font-family: 'Sifonn Pro', sans-serif;
+    color: white;
+    font-size: 14px;
+    margin: 0px;
+    padding-top: 4.8px;
+}
+
+.description-box {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 14px;
+    overflow-y: scroll;
+    /* margin-left: 0; */
+}
+
+.description-text {
+    margin: 0px;
+    margin-right: 2px;
+}
+
+/* Recommendations */
+.recommendation-text {
+    font-family: 'Sifonn Pro', sans-serif;
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.similar-movies {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.similar-movie-posters {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.similar-movie-posters-link:nth-child(n+5) {
+    display: none;
+}
+
+.info-footer {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.recommendation-container-hide {
+    display: none;
+}
+
+
+/***********LEVEL 3***********/ 
+@media screen and (min-width: 513px) and (max-width: 590px) {
+    .similar-movie-posters-link:nth-child(5) {
+        display: block;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .movie-year {
+        font-size: 17px;
+    }
+    
+    .tmdb-rating {
+        font-size: 17px;
+    }   
+    
+    .movie-time {
+        font-size: 17px;
+    }
+
+    .trailer-button {
+        width: 90px;
+        height: 30px;
+    }
+    
+    .play-trailer {
+        width: 14px;
+    }
+    
+    .trailer-text {
+        font-size: 17px;
+        padding-top: 4.8px;
+    }
+
+    .title-box {
+        margin-bottom: 5px;
+    }
+
+    .date-rating-box {
+        margin-bottom: 5px;
+    }
+
+    .trailer-time {
+        margin-bottom: 5px;
+    }
+    
+    .description-box {
+        font-size: 17px;
+    }
+
+    .recommendation-text {
+        font-size: 17px;
+    }
+}
+
+/***********LEVEL 4***********/ 
+@media screen and (min-width: 591px) and (max-width: 680px) {
+    .similar-movie-posters-link:nth-child(5), .similar-movie-posters-link:nth-child(6) {
+        display: block;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .movie-year {
+        font-size: 18px;
+    }
+    
+    .tmdb-rating {
+        font-size: 18px;
+    }   
+    
+    .movie-time {
+        font-size: 18px;
+    }
+
+    .trailer-button {
+        width: 95px;
+        height: 31px;
+    }
+    
+    .play-trailer {
+        width: 14px;
+    }
+    
+    .trailer-text {
+        font-size: 18px;
+        padding-top: 3px;
+    }
+
+    .title-box {
+        margin-bottom: 5px;
+    }
+
+    .date-rating-box {
+        margin-bottom: 5px;
+    }
+
+    .trailer-time {
+        margin-bottom: 5px;
+    }
+    
+    .description-box {
+        font-size: 18px;
+    }
+
+    .recommendation-text {
+        font-size: 18px;
+    }
+}
+
+/***********LEVEL 5***********/ 
+@media screen and (min-width: 681px) and (max-width: 770px) {
+    .similar-movie-posters-link:nth-child(5), .similar-movie-posters-link:nth-child(6), .similar-movie-posters-link:nth-child(7) {
+        display: block;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .movie-year {
+        font-size: 19px;
+    }
+    
+    .tmdb-rating {
+        font-size: 19px;
+    }   
+    
+    .movie-time {
+        font-size: 19px;
+    }
+
+    .trailer-button {
+        width: 98px;
+        height: 33px;
+    }
+    
+    .play-trailer {
+        width: 14px;
+    }
+    
+    .trailer-text {
+        font-size: 19px;
+        padding-top: 3px;
+    }
+
+    .title-box {
+        margin-bottom: 5px;
+    }
+
+    .date-rating-box {
+        margin-bottom: 5px;
+    }
+
+    .trailer-time {
+        margin-bottom: 5px;
+    }
+    
+    .description-box {
+        font-size: 19px;
+    }
+
+    .recommendation-text {
+        font-size: 19px;
+    }
+}
+
+/***********LEVEL 6***********/ 
+@media screen and (min-width: 771px) and (max-width: 820px) {
+    .similar-movie-posters-link:nth-child(5), .similar-movie-posters-link:nth-child(6), .similar-movie-posters-link:nth-child(7), .similar-movie-posters-link:nth-child(8) {
+        display: block;
+    }
+
+    .title {
+        font-size: 34px;
+    }
+
+    .movie-year {
+        font-size: 20px;
+    }
+    
+    .tmdb-rating {
+        font-size: 20px;
+    }   
+    
+    .movie-time {
+        font-size: 20px;
+    }
+
+    .trailer-button {
+        width: 100px;
+        height: 33px;
+    }
+    
+    .play-trailer {
+        width: 15px;
+    }
+    
+    .trailer-text {
+        font-size: 20px;
+        padding-top: 3px;
+    }
+
+    .title-box {
+        margin-bottom: 5px;
+    }
+
+    .date-rating-box {
+        margin-bottom: 5px;
+    }
+
+    .trailer-time {
+        margin-bottom: 5px;
+    }
+    
+    .description-box {
+        font-size: 20px;
+    }
+
+    .recommendation-text {
+        font-size: 20px;
+    }
+}
+
+/*SWITCH VIEWS*/
+
+/***********LEVEL 7***********/ 
+@media screen and (min-width: 821px) and (max-width: 960px) {
+    .backdrop-box {
+        height: 100vh;
+        position: relative;
+    }
+
+    .backdrop-box:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.8);
+    }
+
+    .movie-box {
+        position: absolute;
+        top: 100px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 600px;
+        width: 800px;
+        margin: auto;
+    }
+    
+    .movie-poster-box {
+        display: flex;
+        align-items: center;
+        width: 500px;
+    }
+    
+    .movie-poster {
+        width: 400px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .movie-year {
+        font-size: 20px;
+    }
+    
+    .tmdb-rating {
+        font-size: 20px;
+    }   
+    
+    .movie-time {
+        font-size: 20px;
+    }
+
+    .trailer-button {
+        width: 100px;
+        height: 35px;
+    }
+    
+    .play-trailer {
+        width: 15px;
+    }
+    
+    .trailer-text {
+        font-size: 20px;
+        padding-top: 4px;
+    }
+
+    .description-container {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title-box {
+        margin-bottom: 10px;
+    }
+
+    .date-rating-box {
+        margin-bottom: 10px;
+    }
+
+    .trailer-time {
+        margin-bottom: 10px;
+    }
+    
+    .description-box {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .recommendation-container {
+        display: none;
+    }
+
+    .recommendation-container-hide {
+        display: block;
+    }
+
+    .recommendation-text {
+        margin: 10px 0px;
+        font-size: 16px;
+    }
+
+    .similar-movies {
+        margin: 0;
+        justify-content: flex-start;
+    }
+}
+
+/***********LEVEL 8***********/ 
+@media screen and (min-width: 961px) and (max-width: 1280px){
+    .backdrop-box {
+        height: 100vh;
+        position: relative;
+        
+    }
+
+    .backdrop-box:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.8);
+    }
+
+    .movie-box {
+        position: absolute;
+        top: 100px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 600px;
+        width: 900px;
+        margin: auto;
+    }
+
+    .movie-poster-box {
+        display: flex;
+        align-items: center;
+        width: 500px;
+    }
+    
+    .movie-poster {
+        width: 400px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .movie-year {
+        font-size: 20px;
+    }
+    
+    .tmdb-rating {
+        font-size: 20px;
+    }   
+    
+    .movie-time {
+        font-size: 20px;
+    }
+
+    .trailer-button {
+        width: 100px;
+        height: 35px;
+    }
+    
+    .play-trailer {
+        width: 15px;
+    }
+    
+    .trailer-text {
+        font-size: 20px;
+        padding-top: 4px;
+    }
+
+    .description-container {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title-box {
+        margin-bottom: 10px;
+    }
+
+    .date-rating-box {
+        margin-bottom: 10px;
+    }
+
+    .trailer-time {
+        margin-bottom: 10px;
+    }
+    
+    .description-box {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .recommendation-container {
+        display: none;
+    }
+
+    .recommendation-container-hide {
+        display: block;
+    }
+
+    .recommendation-text {
+        margin: 10px 0px;
+        font-size: 16px;
+    }
+
+    .similar-movies {
+        margin: 0;
+        justify-content: flex-start;
+    }    
+
+    .similar-movie-posters-link:nth-child(5) {
+        display: block;
+    }
+}
+
+/***********LEVEL 9***********/ 
+@media screen and (min-width: 1281px) {
+    .backdrop-box {
+        height: 100vh;
+        position: relative;
+        
+    }
+
+    .backdrop-box:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.8);
+    }
+
+    .movie-box {
+        position: absolute;
+        top: 100px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 600px;
+        width: 1000px;
+        margin: auto;
+    }
+        
+    .movie-poster-box {
+        display: flex;
+        align-items: center;
+        width: 500px;
+    }
+    
+    .movie-poster {
+        width: 400px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .movie-year {
+        font-size: 20px;
+    }
+    
+    .tmdb-rating {
+        font-size: 20px;
+    }   
+    
+    .movie-time {
+        font-size: 20px;
+    }
+
+    .trailer-button {
+        width: 100px;
+        height: 35px;
+    }
+    
+    .play-trailer {
+        width: 15px;
+    }
+    
+    .trailer-text {
+        font-size: 20px;
+        padding-top: 4px;
+    }
+
+    .description-container {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title-box {
+        margin-bottom: 10px;
+    }
+
+    .date-rating-box {
+        margin-bottom: 10px;
+    }
+
+    .trailer-time {
+        margin-bottom: 10px;
+    }
+    
+    .description-box {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .recommendation-container {
+        display: none;
+    }
+
+    .recommendation-container-hide {
+        display: block;
+    }
+
+    .recommendation-text {
+        margin: 10px 0px;
+        font-size: 16px;
+    }
+
+    .similar-movies {
+        margin: 0;
+        justify-content: flex-start;
+    }    
+
+    .similar-movie-posters-link:nth-child(5), .similar-movie-posters-link:nth-child(6) {
+        display: block;
+    }
+}
+
+/***********LEVEL 1***********/
+@media screen and (max-width: 400px) and (max-height: 700px) {
+    .backdrop-box {
+        height: 220px;
+        position: relative;
+    }
+
+    .movie-box {
+        height: 250px;
+    }
+
+    .movie-poster {
+        width: 160px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+    
+    .movie-year {
+        font-size: 14px;
+    }
+    
+    .tmdb-rating {
+        font-size: 14px;
+    }
+    
+    .movie-time {
+        font-size: 14px;
+    }
+    
+    .trailer-button {
+        height: 24px;
+    }
+    
+    .play-trailer {
+        width: 10px;
+    }
+    
+    .trailer-text {
+        padding-top: 2px;
+    }
+    
+    .description-box {
+        font-size: 14px;
+    }
+
+    .recommendation-text {
+        font-size: 14px;
+    }
+}

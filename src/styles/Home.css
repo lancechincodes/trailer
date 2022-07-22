@@ -1,0 +1,75 @@
+/***********LEVEL 2***********/
+.home {
+    background: #362C5D;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 60px;
+}
+
+.logo-title {
+    font-family: 'Archive', sans-serif;
+    font-size: 50px;
+    color: #0FF2F2
+}
+
+/***********LEVEL 3***********/ 
+@media screen and (min-width: 513px) and (max-width: 768px) {
+    .logo-image {
+        width: 62px;
+    }
+    
+    .logo-title {
+        font-size: 51.667px;
+    }
+}
+
+/***********LEVEL 4***********/ 
+@media screen and (min-width: 769px) and (max-width: 960px) {
+    .logo-image {
+        width: 64px;
+    }
+    
+    .logo-title {
+        font-size: 53.333px;
+    }
+}
+
+/***********LEVEL 5***********/ 
+@media screen and (min-width: 961px) and (max-width: 1280px){
+    .logo-image {
+        width: 66px;
+    }
+    
+    .logo-title {
+        font-size: 55px;
+    }
+}
+
+/***********LEVEL 6***********/ 
+@media screen and (min-width: 1281px) {
+    .logo-image {
+        width: 68px;
+    }
+    
+    .logo-title {
+        font-size: 56.667px;
+    }
+}
+
+/***********LEVEL 1***********/
+@media screen and (max-width: 400px) and (max-height: 700px) {
+    .logo-title {
+        font-size: 40px;
+    }
+}
