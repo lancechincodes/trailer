@@ -1,7 +1,7 @@
 # Trailer 🎬
 I'm happy to present Trailer – a website that allow cinema enthusiasts to search for, explore, and enjoy movie trailers. Specifically, it allows users to search via input, genre, trending, top rated, what's playing in theatre, and more! Hope you enjoy!
 ## Check It Out 💡 
-- [Trailer](https://trailer-lancechincodes.netlify.app/) 
+- [Trailer](https://trail-er.netlify.app/) 
 
 ## Mobile Screenshots 📱 📸
 ![Home Page](/screenshots/mobile/home-mobile-screenshot.png)
