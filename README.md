@@ -28,12 +28,9 @@ I'm happy to present Trailer – a website that allow users to search for, explo
 </p>
 
 ## Installation Instructions 📲
-To view and suggest edits to this project locally:
+To view this project locally:
 1. Fork and clone this repository
-2. Change into the new directory and create a development branch 
-3. Add and commit suggested edits
-4. Push edits to the remote
-5. Submit a pull request for me to view
+2. Navigate into the directory
 
 ## User Stories 🗣
 As a user, I want to...
