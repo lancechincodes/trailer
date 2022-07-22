@@ -91,7 +91,7 @@
 
 .movie-year {
     font-family: 'Sifonn Pro', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
     margin-right: 10px;
     margin-top: 0px;
@@ -101,13 +101,13 @@
 .tmdb-rating {
     margin: 0;
     font-family: 'Sifonn Pro', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
 }
 
 .movie-time {
     font-family: 'Sifonn Pro', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -142,7 +142,7 @@
 .trailer-text {
     font-family: 'Sifonn Pro', sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0px;
     padding-top: 4.8px;
 }
@@ -150,7 +150,7 @@
 .description-box {
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     overflow-y: scroll;
     /* margin-left: 0; */
 }
@@ -164,7 +164,7 @@
 .recommendation-text {
     font-family: 'Sifonn Pro', sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 10px;
 }
 

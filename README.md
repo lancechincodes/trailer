@@ -4,12 +4,19 @@ I'm happy to present Trailer – a website that allow users to search for, explo
 ## Check It Out 💡 
 - [Trailer](https://trailer-lancechincodes.netlify.app/) 
 
-## Application Screenshots 📸
-![Home Page](/screenshots/home-screenshot.png)
-![Browse Page](/screenshots/browse-screenshot.png)
-![Navigation Page](/screenshots/nav-screenshot.png)
-![Gallery Page](/screenshots/gallery-screenshot.png)
-![Trailer Page](/screenshots/trailer-screenshot.png)
+## Mobile Screenshots 📱 📸
+![Home Page](/screenshots/mobile/home-mobile-screenshot.png)
+![Browse Page](/screenshots/mobile/browse-mobile-screenshot.png)
+![Navigation Page](/screenshots/mobile/nav-mobile-screenshot.png)
+![Gallery Page](/screenshots/mobile/gallery-mobile-screenshot.png)
+![Trailer Page](/screenshots/mobile/trailer-mobile-screenshot.png)
+
+## Desktop Screenshots 🖥 📸
+![Home Page](/screenshots/desktop/home-screenshot.png)
+![Browse Page](/screenshots/desktop/browse-screenshot.png)
+![Navigation Page](/screenshots/desktop/nav-screenshot.png)
+![Gallery Page](/screenshots/desktop/gallery-screenshot.png)
+![Trailer Page](/screenshots/desktop/trailer-screenshot.png)
 
 ## Technology and Tools 🛠
 <p align="left">
@@ -44,7 +51,13 @@ As a recruiter, I want to...
 - Navigate the website easily 
 - Enjoy the design of the application
 
-## Wireframes 🕸
+## Mobile Wireframes 📱 🕸
+![Home Page Wireframe](/planning/wireframes/mobile/home-mobile.png)
+![Browse Page Wireframe](/planning/wireframes/mobile/browse-mobile.png)
+![Navigation Page Wireframe](/planning/wireframes/mobile/nav-menu-mobile.png)
+![Gallery Page Wireframe](/planning/wireframes/mobile/gallery-mobile.png)
+![Trailer Page Wireframe](/planning/wireframes/mobile/trailer-mobile.png)
+## Desktop Wireframes 🖥 🕸
 ![Home Page Wireframe](/planning/wireframes/desktop/home-desktop.png)
 ![Browse Page Wireframe](/planning/wireframes/desktop/browse-desktop.png)
 ![Navigation Page Wireframe](/planning/wireframes/desktop/nav-menu-desktop.png)
