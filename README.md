@@ -1,5 +1,6 @@
 # Trailer 🎬
-I'm happy to present Trailer – a website that allow cinema enthusiasts to search for, explore, and enjoy movie trailers. Specifically, it allows users to search via input, genre, trending, top rated, what's playing in theatre, and more! Hope you enjoy!
+I'm happy to present Trailer – a website that allows cinema enthusiasts to search for, explore, and enjoy movie trailers. Specifically, it enables users to search via input, genre, trending, top-rated, what's playing in theaters, and more!
+
 ## Check It Out 💡 
 - [Trailer](https://trail-er.netlify.app/) 
 
@@ -72,13 +73,13 @@ As a recruiter, I want to...
 ![Component Hierarchy](/planning/component-hierarchy/component-hierarchy.png)
 
 ## Challenges 💪
-As exciting as this project was, it was equally challenging. A few roadblockers included implementing conditional rendering, incoporating responsive design, and navigating the timing of API calls and responses. However, after struggling through these concepts throughout the project, I can confidently say that I feel much more comfortable in these areas.
+As exciting as this project was, it was equally challenging. A few roadblockers I encountered were implementing conditional rendering, incoporating responsive design, and navigating the timing of API calls and responses. However, after working through these concepts, I can confidently say that I understand them much better!
 
 ## What's Next 🏁
-Trailer is your new home to all things movie trailers. From the most popular flicks of the week to the top rated films of all time, it has you covered. But looking ahead, my goals are to implement additional interesting metrics and a collection feature to save your favorite movies (via back-end development). 
+Trailer is home to all things movie trailers. From the most popular flicks of the week to the top rated films of all time, it has you covered. So looking ahead, my goals are to implement additional interesting metrics and a collection feature to save your favorite movies (via back-end development). 
 
 ## Reflection 🙌
-Developing Trailer was an incredible learning experience. I interacted with a 3rd party API to fetch data, applied React's component-based architecture with hooks (useState, useEffect, useNavigate, useParams, useContext, & useRef), and explored the possibilites of conditional rendering, React Router, and Framer Motion. Overall, I'm extremely proud of what I developed, and more motivated than ever to continue to learn! But in the meantime, lets kick our feet and enjoy the latest and greatest trailers! Cheers!
+Developing Trailer was an incredible learning experience. I interacted with a 3rd party API to fetch data, applied React's component-based architecture with hooks (useState, useEffect, useNavigate, useParams, useContext, & useRef), and explored the possibilites of conditional rendering, React Router, and Framer Motion. Overall, I'm extremely proud of what I developed, and I'm more motivated than ever to continue to elevate my skills! But in the meantime, let's sit back, relax, and enjoy the latest and greatest trailers! Cheers!
 
 ## Connect With Me 👥
 <p align="left">
