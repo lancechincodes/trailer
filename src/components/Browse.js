@@ -85,7 +85,7 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
             {/* Trending boxes */}
             <p className="browse-section-title">Popular movies</p>
             <div className="trending-boxes">
-                    <motion.div className="trending-box" whileHover={{scale: .98}}>
+                    <motion.div className="trending-box" whileHover={{scale: .97}}>
                         <Link className="trending-link" to="/browse/trending today">
                             <h3 className="trending-text">Trending today</h3>
                             <div className="trending-poster-div">
@@ -93,7 +93,7 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
                             </div>
                         </Link>
                     </motion.div>
-                    <motion.div className="trending-box" whileHover={{scale: .98}}>
+                    <motion.div className="trending-box" whileHover={{scale: .97}}>
                         <Link className="trending-link" to="/browse/trending this week">
                             <h3 className="trending-text">Trending this week</h3>
                             <div className="trending-poster-div">
