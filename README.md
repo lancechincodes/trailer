@@ -4,6 +4,9 @@ I'm happy to present Trailer – a website that allows cinema enthusiasts to sea
 ## Check It Out 💡 
 - [Trailer](https://trail-er.netlify.app/) 
 
+## API
+- [The Movie Database (TMDB)](https://www.themoviedb.org/documentation/api)
+
 ## Mobile Screenshots 📱 📸
 ![Home Page](/screenshots/mobile/home-mobile-screenshot.png)
 ![Browse Page](/screenshots/mobile/browse-mobile-screenshot.png)
