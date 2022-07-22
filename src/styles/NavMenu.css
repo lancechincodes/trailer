@@ -42,12 +42,12 @@
 }
 
 .nav-icon {
-    width: 45px;
+    width: 40px;
     height: auto;
 }
 
 .nav-text {
-    font-size: 29px;
+    font-size: 26px;
     color: white;
     font-family: 'Archive', sans-serif;
     cursor: pointer;
@@ -62,12 +62,12 @@
 }
 
 .tmdb-logo {
-   width: 250px;
+   width: 220px;
 }
 
 .attribution-text {
     font-family: 'Sifonn Pro';
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.3;
     color: white;
     margin-bottom: 0px;
@@ -82,12 +82,12 @@
 }
 
 .logo-image-nav {
-    width: 60px;
+    width: 55px;
 }
 
 .logo-title-nav {
     font-family: 'Archive', sans-serif;
-    font-size: 50px;
+    font-size: 45.833px;
     color: #0FF2F2;
     margin: 0px;
 }
@@ -99,7 +99,7 @@
 
 .lance {
     font-family: 'Sifonn Pro', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     color: white;
     margin-top: 5px;
     margin-bottom: 0;
@@ -108,28 +108,28 @@
 /***********LEVEL 3***********/ 
 @media screen and (min-width: 513px) and (max-width: 768px) {
     .close-page-icon {
-        width: 41px;
+        width: 39px;
     }
 }
 
 /***********LEVEL 4***********/ 
 @media screen and (min-width: 769px) and (max-width: 960px) {
     .close-page-icon {
-        width: 42px;
+        width: 40px;
     }
 }
 
 /***********LEVEL 5***********/ 
 @media screen and (min-width: 961px) and (max-width: 1280px){
     .close-page-icon {
-        width: 43px;
+        width: 41px;
     }
 }
 
 /***********LEVEL 6***********/ 
 @media screen and (min-width: 1281px) {
     .close-page-icon {
-        width: 44px;
+        width: 42px;
     }
 }
 
