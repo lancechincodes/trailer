@@ -51,7 +51,7 @@
     padding: 10px;
     height: 15px;
     border-radius: 10px;
-    width: 290px;
+    width: 300px;
 }
 
 .search-icon-div {
@@ -355,16 +355,16 @@
 @media screen and (min-width: 1281px) {
     .trending-boxes {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 200px;
+        grid-template-rows: 180px;
         gap: 10px 10px;
     }
 
     .trending-box {
-        height: 200px;
+        height: 180px;
     }
 
     .trending-poster {
-        margin-top: 42px;
+        margin-top: 32px;
         width: 125px;
         height: 125px;
     }
@@ -375,7 +375,7 @@
 
     .genre-container {
         grid-template-columns: repeat(5, 1fr);
-        grid-auto-rows: 160px;
+        grid-auto-rows: 140px;
     }
 
     .trending-text {
@@ -430,5 +430,13 @@
 
     .genre-container {
         grid-auto-rows: 80px;
+    }
+
+    .input-box {
+        width: 280px;
+    }
+
+    .input-text {
+        width: 230px;
     }
 }

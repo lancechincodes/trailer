@@ -72,7 +72,7 @@
 }
 
 .poster-img { 
-    width: 330px;
+    width: 300px;
     height: auto;
     border-radius: 10px;
     cursor: pointer;
@@ -110,7 +110,26 @@
 /***********LEVEL 3***********/ 
 @media screen and (min-width: 513px) and (max-width: 768px) {
     .back-icon {
-        width: 26px;
+        width: 24px;
+    }
+    
+    .back-text {
+        font-size: 18px;
+    }
+
+    .hamburger-image {
+        width: 39px;
+    }
+
+    .not-found-text {
+        font-size: 20px;
+    }
+}
+
+/***********LEVEL 4***********/ 
+@media screen and (min-width: 769px) and (max-width: 960px) {
+    .back-icon {
+        width: 25px;
     }
     
     .back-text {
@@ -118,7 +137,7 @@
     }
 
     .hamburger-image {
-        width: 41px;
+        width: 40px;
     }
 
     .not-found-text {
@@ -126,14 +145,33 @@
     }
 }
 
-/***********LEVEL 4***********/ 
-@media screen and (min-width: 769px) and (max-width: 960px) {
+/***********LEVEL 5***********/ 
+@media screen and (min-width: 961px) and (max-width: 1280px){
+    .back-icon {
+        width: 26px;
+    }
+    
+    .back-text {
+        font-size: 22px;
+    }
+
+    .hamburger-image {
+        width: 41px;
+    }
+
+    .not-found-text {
+        font-size: 24px;
+    }
+}
+
+/***********LEVEL 6***********/ 
+@media screen and (min-width: 1281px) {
     .back-icon {
         width: 27px;
     }
     
     .back-text {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .hamburger-image {
@@ -141,45 +179,7 @@
     }
 
     .not-found-text {
-        font-size: 24px;
-    }
-}
-
-/***********LEVEL 5***********/ 
-@media screen and (min-width: 961px) and (max-width: 1280px){
-    .back-icon {
-        width: 28px;
-    }
-    
-    .back-text {
-        font-size: 24px;
-    }
-
-    .hamburger-image {
-        width: 43px;
-    }
-
-    .not-found-text {
         font-size: 26px;
-    }
-}
-
-/***********LEVEL 6***********/ 
-@media screen and (min-width: 1281px) {
-    .back-icon {
-        width: 29px;
-    }
-    
-    .back-text {
-        font-size: 26px;
-    }
-
-    .hamburger-image {
-        width: 44px;
-    }
-
-    .not-found-text {
-        font-size: 28px;
     }
 }
 

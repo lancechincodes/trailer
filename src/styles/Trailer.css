@@ -11,7 +11,7 @@
 }
 
 .backdrop-box {
-    height: 290px;
+    height: 250px;
     position: relative;
 }
 
@@ -466,36 +466,36 @@
     }
     
     .movie-poster {
-        width: 400px;
+        width: 350px;
     }
 
     .title {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .movie-year {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .tmdb-rating {
-        font-size: 20px;
+        font-size: 18px;
     }   
     
     .movie-time {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .trailer-button {
-        width: 100px;
-        height: 35px;
+        width: 95px;
+        height: 30px;
     }
     
     .play-trailer {
-        width: 15px;
+        width: 13px;
     }
     
     .trailer-text {
-        font-size: 20px;
+        font-size: 18px;
         padding-top: 4px;
     }
 
@@ -519,7 +519,7 @@
     }
     
     .description-box {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 10px;
     }
 
@@ -533,13 +533,13 @@
 
     .recommendation-text {
         margin: 10px 0px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .similar-movies {
         margin: 0;
         justify-content: flex-start;
-    }
+    }    
 }
 
 /***********LEVEL 8***********/ 
@@ -578,36 +578,36 @@
     }
     
     .movie-poster {
-        width: 400px;
+        width: 350px;
     }
 
     .title {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .movie-year {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .tmdb-rating {
-        font-size: 20px;
+        font-size: 18px;
     }   
     
     .movie-time {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .trailer-button {
-        width: 100px;
-        height: 35px;
+        width: 95px;
+        height: 30px;
     }
     
     .play-trailer {
-        width: 15px;
+        width: 13px;
     }
     
     .trailer-text {
-        font-size: 20px;
+        font-size: 18px;
         padding-top: 4px;
     }
 
@@ -631,7 +631,7 @@
     }
     
     .description-box {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 10px;
     }
 
@@ -645,7 +645,7 @@
 
     .recommendation-text {
         margin: 10px 0px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .similar-movies {
@@ -694,36 +694,36 @@
     }
     
     .movie-poster {
-        width: 400px;
+        width: 350px;
     }
 
     .title {
-        font-size: 40px;
+        font-size: 38px;
     }
 
     .movie-year {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .tmdb-rating {
-        font-size: 20px;
+        font-size: 18px;
     }   
     
     .movie-time {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .trailer-button {
-        width: 100px;
-        height: 35px;
+        width: 95px;
+        height: 30px;
     }
     
     .play-trailer {
-        width: 15px;
+        width: 13px;
     }
     
     .trailer-text {
-        font-size: 20px;
+        font-size: 18px;
         padding-top: 4px;
     }
 
@@ -747,7 +747,7 @@
     }
     
     .description-box {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 10px;
     }
 
@@ -761,7 +761,7 @@
 
     .recommendation-text {
         margin: 10px 0px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .similar-movies {
