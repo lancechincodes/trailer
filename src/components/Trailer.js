@@ -52,7 +52,7 @@ function Trailer() {
     // calculate min and hour from total min
     let min = movieTime
     let hour = 0
-    while (min > 60) {
+    while (min >= 60) {
         min -= 60
         hour++
     }

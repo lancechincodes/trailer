@@ -110,10 +110,23 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeK
   fetch(url2)
     .then(res => res.json())
     .then(res => {
-      for (let i = 0; i < res.results.length; i++) {
-        if (res.results[i].name.includes("Official Trailer")) {
-          setTrailerYoutubeKey(res.results[i].key)
+      // console.log(res)
+      let filteredRes = res.results.filter((vid) => vid.type === "Trailer")
+      // console.log(filteredRes)
+      let found = false
+      for (let i = 0; i < filteredRes.length; i++) {
+        if (filteredRes[i].name.includes("Official Trailer")) {
+          setTrailerYoutubeKey(filteredRes[i].key)
+          found = true
           break;
+        }
+      }
+      if (!found) {
+        for (let i = 0; i < filteredRes.length; i++) {
+          if (filteredRes[i].name.includes("Trailer")) {
+            setTrailerYoutubeKey(filteredRes[i].key)
+            break;
+          }
         }
       }
     })
