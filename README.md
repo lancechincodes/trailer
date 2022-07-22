@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Trailer 🎬
+I'm happy to present Trailer – a website that allow users to search for, explore, and enjoy movie trailers!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Check It Out 💡 
+- [Trailer](https://trailer-lancechincodes.netlify.app/) 
 
-## Available Scripts
+## Application Screenshots 📸
+![Home Page](/screenshots/home-screenshot.png)
+![Browse Page](/screenshots/browse-screenshot.png)
+![Navigation Page](/screenshots/nav-screenshot.png)
+![Gallery Page](/screenshots/gallery-screenshot.png)
+![Trailer Page](/screenshots/trailer-screenshot.png)
 
-In the project directory, you can run:
+## Technology and Tools 🛠
+<p align="left">
+<a target="_blank" href="https://reactjs.org/"> <img src="https://brandslogos.com/wp-content/uploads/images/large/react-logo-1.png" alt="React Icon" width="40" height="40"/></a> 
+<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript Icon" width="40" height="40"/></a>
+ <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3 Icon" width="40" height="40"/></a> 
+ <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML" > <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5 Icon" width="40" height="40"/></a>
+ <a target="_blank" href="https://www.framer.com/motion/"> <img src="https://pagepro.co/blog/wp-content/uploads/2020/03/framer-motion.png" alt="Framer Motion Icon" width="40" height="40"/></a> 
+</p>
 
-### `npm start`
+## Installation Instructions 📲
+To view and suggest edits to this project locally:
+1. Fork and clone this repository
+2. Change into the new directory and create a development branch 
+3. Add and commit suggested edits
+4. Push edits to the remote
+5. Submit a pull request for me to view
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Stories 🗣
+As a user, I want to...
+- Search for movie trailers to watch 
+- Choose categories to filter my results
+- Navigate to different pages via a navigation menu
+- Explore up-to-date and trending movies
+- View an aesthetically pleasing website
+- Interact with different elements (click, hover, drag, etc.)
+- Watch trailers without getting redirected to another website
+- Be able to comfortably view and use the website on mobile, tablet, and laptop
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As a recruiter, I want to...
+- View organized code structure and layouts 
+- Navigate the website easily 
+- Enjoy the design of the application
 
-### `npm test`
+## Wireframes 🕸
+![Home Page Wireframe](/planning/wireframes/desktop/home-desktop.png)
+![Browse Page Wireframe](/planning/wireframes/desktop/browse-desktop.png)
+![Navigation Page Wireframe](/planning/wireframes/desktop/nav-menu-desktop.png)
+![Gallery Page Wireframe](/planning/wireframes/desktop/gallery-desktop.png)
+![Trailer Page Wireframe](/planning/wireframes/desktop/trailer-desktop.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Component Hierarchy 🧩
+![Component Hierarchy](/planning/component-hierarchy/component-hierarchy.png)
 
-### `npm run build`
+## Challenges 💪
+As exciting as this project was, it was equally challenging. A few roadblockers included implementing conditional rendering, incoporating responsive design, and navigating the timing of API calls and responses. However, after struggling through these concepts throughout the project, I can confidently say that I feel much more comfortable in these areas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What's Next 🏁
+Trailer is your new home to all things movie trailers. From the most popular flicks of the week to the top rated films of all time, it has you covered. But looking ahead, my goals are to implement additional interesting metrics and a collection feature to save your favorite movies (via back-end development). 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Reflection 🙌
+Developing Trailer was an incredible learning experience. I interacted with a 3rd party API to fetch data, applied React's component-based architecture with hooks (useState, useEffect, useNavigate, useParams, useContext, & useRef), and explored the possibilites of conditional rendering, React Router, and Framer Motion. Overall, I'm extremely proud of what I developed, and more motivated than ever to continue to learn! But in the meantime, lets kick our feet and enjoy the latest and greatest trailers! Cheers!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Connect With Me 👥
+<p align="left">
+<a target="_blank" href="https://www.linkedin.com/in/lance-chin/"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn Icon" height="30" width="40"/></a>
+</p>

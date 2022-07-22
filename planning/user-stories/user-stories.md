@@ -1,8 +1,8 @@
 As a user, I want to...
-- Search for movie and TV show trailers to watch 
-- Choose categories to filter my results 
+- Search for movie trailers to watch 
+- Choose categories to filter my results
 - Navigate to different pages via a navigation menu
-- Explore up-to-date and trending movies / TV shows
+- Explore up-to-date and trending movies
 - View an aesthetically pleasing website
 - Interact with different elements (click, hover, drag, etc.)
 - Watch trailers without getting redirected to another website
