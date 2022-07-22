@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import back from '../assets/back.svg'
 import hamburger from '../assets/hamburger.svg'
 import playTrailer from '../assets/play-trailer.svg'
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState, useContext, useRef } from 'react'
 import { getMovieData, getYoutubeKeyData, getMovieSimilarData } from '../utils'
 import { DataContext } from '../DataContext'
 import YouTube from 'react-youtube'
@@ -30,7 +30,10 @@ function Trailer() {
 
     const [showTrailer, setShowTrailer] = useState(false)
 
-    const youtubeUrl = "https://www.youtube.com/watch?v="
+    const trailerVid = useRef()
+    const trailerBtnDiv = useRef()
+    const trailerBtnText = useRef()
+    const trailerBtnSymbol = useRef()
 
     useEffect(() => {
         // get general data about selected movie
@@ -66,6 +69,15 @@ function Trailer() {
         // backgroundPosition: 'top'
     }
 
+    function hideTrailer(event) {
+        if (event.target === trailerBtnDiv.current || event.target === trailerBtnText.current || event.target === trailerBtnSymbol.current) {
+            return
+        }
+        else if (event.target !== trailerVid) {
+            setShowTrailer(false)
+        }
+    }
+
     if (loadingMovieData || loadingYoutubeKeyData || loadingMovieSimilar) {
         return (
             <div className="loading-page">
@@ -75,7 +87,7 @@ function Trailer() {
     }
 
     return (
-        <div className="trailer-page">
+        <div className="trailer-page" onClick={hideTrailer}>
             
             {/* Backdrop and headings */}
             <div className="backdrop-box" style={backdropStyles}>
@@ -94,7 +106,7 @@ function Trailer() {
             <div className="info-footer">
                 {/* Trailer and poster/info */}
                 {showTrailer ? (
-                    <div className="movie-box"> 
+                    <div ref={trailerVid} className="movie-box"> 
                         <YouTube 
                             videoId={trailerYoutubeKey} 
                             className="youtube-box"     
@@ -117,19 +129,29 @@ function Trailer() {
                             <div className="date-rating-box">
                                 <p className="movie-year">{movieDate.substring(0,4)}</p>
                                 <div className="tmdb-rating-box">
-                                    <p className="tmdb-rating">TMDB: {movieRating}/10</p>
+                                    <p className="tmdb-rating">| TMDB: {+movieRating.toFixed(2)}/10</p>
                                 </div>
                             </div>
                             <div className="trailer-time">
-                                <motion.div className="trailer-button" onClick={() => setShowTrailer(true)} whileHover={{scale: .95}}>
-                                    <img className="play-trailer" src={playTrailer} alt="Play trailer icon"/>
-                                    <p className="trailer-text">Trailer</p>
+                                <motion.div ref={trailerBtnDiv} className="trailer-button" onClick={() => setShowTrailer(true)} whileHover={{scale: .96}}>
+                                    <img ref={trailerBtnSymbol} className="play-trailer" src={playTrailer} alt="Play trailer icon"/>
+                                    <p ref={trailerBtnText} className="trailer-text">Trailer</p>
                                 </motion.div>
                                 {hour !== 0 ? (<p className="movie-time">{hour}h {min}m</p>) 
                                 : (<p className="movie-time">{min}m</p>)}
                             </div>
                             <div className="description-box">
                                 <p className="description-text">{movieDescription}</p>
+                            </div>
+                            <div className="recommendation-container-hide">
+                                <p className="recommendation-text">You may also like</p>
+                                <div className="similar-movies">
+                                    {movieSimilar.map((movie) => (
+                                        <Link className="similar-movie-posters-link" to={`/browse/${movie.genre_ids[0]}/${movie.id}`} key={movie.id}>
+                                            <motion.img className="similar-movie-posters" src={imagePath + movie.poster_path} alt={movie.title} whileHover={{scale: .98}}/>
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
