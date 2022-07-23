@@ -45,7 +45,7 @@ function Trailer() {
         getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeKeyData)
 
         // get similar movies as selected one
-        const url3 = `${searchOptions.api}/movie/${movieId}/similar?api_key=${searchOptions.key}&${searchOptions.language}&page=1`
+        const url3 = `${searchOptions.api}/movie/${movieId}/recommendations?api_key=${searchOptions.key}&${searchOptions.language}&page=1`
         getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimilar)
     },[])
 
@@ -129,14 +129,18 @@ function Trailer() {
                             <div className="date-rating-box">
                                 <p className="movie-year">{movieDate.substring(0,4)}</p>
                                 <div className="tmdb-rating-box">
-                                    <p className="tmdb-rating">| TMDB: {+movieRating.toFixed(2)}/10</p>
+                                    <p className="tmdb-rating">| TMDB: {+movieRating.toFixed(1)}/10</p>
                                 </div>
                             </div>
                             <div className="trailer-time">
-                                <motion.button ref={trailerBtnDiv} className="trailer-button" onClick={() => setShowTrailer(true)} whileHover={{scale: .95}}>
+                                <button 
+                                    ref={trailerBtnDiv} 
+                                    className="trailer-button" 
+                                    onClick={() => setShowTrailer(true)} 
+                                >
                                     <img ref={trailerBtnSymbol} className="play-trailer" src={playTrailer} alt="Play trailer icon"/>
                                     <p ref={trailerBtnText} className="trailer-text">Trailer</p>
-                                </motion.button>
+                                </button>
                                 {hour !== 0 ? (<p className="movie-time">{hour}h {min}m</p>) 
                                 : (<p className="movie-time">{min}m</p>)}
                             </div>

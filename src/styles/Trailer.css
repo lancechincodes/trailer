@@ -133,8 +133,13 @@
     cursor: pointer;
     height: 27px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    border: none;
 }
+
+.trailer-button:hover {
+    background: #8345fe;
+}
+
 
 .play-trailer {
     width: 12px;
@@ -542,14 +547,17 @@
         margin: 0;
         justify-content: flex-start;
     }    
+
+    .similar-movie-posters {
+        width: 90px;
+    }
 }
 
 /***********LEVEL 8***********/ 
 @media screen and (min-width: 961px) and (max-width: 1280px){
     .backdrop-box {
         height: 100vh;
-        position: relative;
-        
+        position: relative;   
     }
 
     .backdrop-box:before {
@@ -603,7 +611,7 @@
         width: 95px;
         height: 30px;
     }
-    
+
     .play-trailer {
         width: 13px;
     }
@@ -657,6 +665,10 @@
 
     .similar-movie-posters-link:nth-child(5) {
         display: block;
+    }
+
+    .similar-movie-posters {
+        width: 90px;
     }
 }
 
@@ -773,6 +785,10 @@
 
     .similar-movie-posters-link:nth-child(5), .similar-movie-posters-link:nth-child(6) {
         display: block;
+    }
+
+    .similar-movie-posters {
+        width: 90px;
     }
 }
 

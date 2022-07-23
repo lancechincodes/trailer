@@ -7,6 +7,8 @@ import { motion } from 'framer-motion'
 import hamburger from '../assets/hamburger.svg'
 import back from '../assets/back.svg'
 import { getGenreData } from '../utils'
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 function Gallery({genreArr, setGenreArr}) {
     const { genreId } = useParams()
@@ -113,6 +115,22 @@ function Gallery({genreArr, setGenreArr}) {
                             {galleryMovies.map(movie => (
                                 <div className="poster-title" key={movie.id}>
                                     <div className="poster-title-div">
+                                        <div className="rating-wheel-div">
+                                            <div className="rating-wheel">
+                                                <CircularProgressbar 
+                                                    value={Math.round(movie.vote_average * 10)} 
+                                                    text={`${Math.round(movie.vote_average * 10)}%`} 
+                                                    background
+                                                    backgroundPadding={6}
+                                                    styles={buildStyles({
+                                                        backgroundColor: "#362C5D",
+                                                        textColor: "#FFFFFF",
+                                                        pathColor: "#0FF2F2",
+                                                        textSize: '26px'
+                                                    })}    
+                                                />
+                                            </div>
+                                        </div>
                                         <motion.div className="poster-box">
                                             <motion.img whileHover={{scale: .95}} onClick={() => handleClick(movie.id)} className="poster-img" src={imagePath + movie.poster_path} alt={movie.title}/>
                                         </motion.div>
