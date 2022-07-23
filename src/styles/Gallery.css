@@ -57,6 +57,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.rating-wheel-div {
+    width: 295px;    
+    margin-right: 40px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rating-wheel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 55px;
+    font-family: 'Archive', sans-serif;
+    position: absolute;
+    z-index: 999;
+    margin: 2.5px;
 }
 
 .poster-box {

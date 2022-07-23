@@ -89,7 +89,7 @@ export function getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoste
   fetch(url) 
     .then(res => res.json())
     .then(res => {
-      // console.log(res)
+      console.log(res)
       setMovieBackdrop(res.backdrop_path)
       setMovieTitle(res.title)
       setMoviePoster(res.poster_path)
@@ -110,9 +110,7 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeK
   fetch(url2)
     .then(res => res.json())
     .then(res => {
-      // console.log(res)
       let filteredRes = res.results.filter((vid) => vid.type === "Trailer")
-      // console.log(filteredRes)
       let found = false
       for (let i = 0; i < filteredRes.length; i++) {
         if (filteredRes[i].name.includes("Official Trailer")) {

@@ -71,6 +71,8 @@
     border: none;
     font-family: 'Archive', sans-serif;
     font-size: 15px;
+    outline: none;
+    color: #362C5D;
 }
 
 .input-text::placeholder {
