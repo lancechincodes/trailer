@@ -414,7 +414,7 @@
 }
 
 /***********LEVEL 1***********/
-@media screen and (max-width: 400px) and (max-height: 700px) {
+@media screen and (max-width: 400px) and (max-height: 741px) {
 
     .trending-boxes {
         grid-template-rows: repeat(2, 100px);
@@ -441,5 +441,40 @@
 
     .input-text {
         width: 230px;
+    }
+}
+
+/***********IPHONE XR***********/
+@media screen and (width: 414px) and (height: 896px) {
+    .genre-container {
+        height: 36vh;
+    }
+}
+
+/***********IPHONE XR***********/
+@media screen and (width: 768px) and (height: 1024px) {
+    .genre-container {
+        height: 50vh;
+    }
+}
+
+/***********IPAD AIR***********/
+@media screen and (width: 820px) and (height: 1180px) {
+    .genre-container {
+        height: 45vh;
+    }
+}
+
+/***********SURFACE PRO 7**********/
+@media screen and (width: 912px) and (height: 1368px) {
+    .genre-container {
+        height: 50vh;
+    }
+}
+
+/***********NEST HUB**********/
+@media screen and (width: 1024px) and (height: 600px) {
+    .genre-container {
+        height: 23vh;
     }
 }
