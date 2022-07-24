@@ -98,7 +98,7 @@ function NavMenu({genreArr, setGenreArr}) {
                 <div className="attribution">
                     <img className="tmdb-logo" src={tmdb} alt="TMDB Logo"/>
                     <p className="attribution-text">
-                        This product uses TMDB API but is not endorsed or certified by TMDB.
+                        This product uses the TMDB API but is not endorsed or certified by TMDB.
                     </p>
                 </div>
 
