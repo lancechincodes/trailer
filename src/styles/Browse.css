@@ -3,7 +3,7 @@
     background: #362C5D;
     height: 100vh;
     overflow: hidden;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -12,9 +12,7 @@
 .heading-browse {
     display: flex;
     align-items: center;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 0px;
+    margin: 20px 40px;
 }
 
 .logo-browse {
@@ -23,6 +21,7 @@
 
 .logo-image-browse {
     width: 40px;
+    height: auto;
 }
 
 .logo-title-browse {
@@ -47,11 +46,10 @@
     background: white;
     display: flex;
     align-items: center;
-    margin: 0px 40px;
+    margin: 20px 40px 0px 40px;
     padding: 10px;
     height: 15px;
     border-radius: 10px;
-    width: 310px;
 }
 
 .search-icon-div {
@@ -97,6 +95,7 @@
     color: #0FF2F2;
     font-family: 'Sifonn Pro';
     font-size: 16px;
+    margin: 20px 40px;
 }
 
 .trending-boxes {
@@ -157,7 +156,7 @@
     height: 38vh;
     overflow: hidden;
     overflow-y: scroll;
-    margin: 0px 40px;
+    margin: 0px 40px 20px 40px;
     padding-right: 5px;
 }
 
