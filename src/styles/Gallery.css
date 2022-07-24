@@ -99,19 +99,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* .title-box {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.movie-title {
-    font-family: 'Archive';
-    font-size: 18px;
-    color: #0FF2F2;
-    width: 60vw;
-} */
-
 .not-found {
     height: 80vh;
     display: flex;

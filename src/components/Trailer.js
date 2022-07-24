@@ -1,17 +1,16 @@
 import '../styles/Trailer.css'
-import { Link, useNavigate, useParams } from 'react-router-dom'
 import back from '../assets/back.svg'
 import hamburger from '../assets/hamburger.svg'
 import playTrailer from '../assets/play-trailer.svg'
+import YouTube from 'react-youtube'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState, useContext, useRef } from 'react'
 import { getMovieData, getYoutubeKeyData, getMovieSimilarData } from '../utils'
 import { DataContext } from '../DataContext'
-import YouTube from 'react-youtube'
 import { motion } from 'framer-motion'
 
 function Trailer() {
     const { searchOptions, imagePath } = useContext(DataContext)
-    const navigate = useNavigate()
     const { movieId } = useParams()
     const [movieBackdrop, setMovieBackdrop] = useState('')
     const [movieTitle, setMovieTitle] = useState('')
@@ -20,16 +19,14 @@ function Trailer() {
     const [movieRating, setMovieRating] = useState('')
     const [movieTime, setMovieTime] = useState('')
     const [movieDescription, setMovieDescription] = useState('')
-
     const [trailerYoutubeKey, setTrailerYoutubeKey] = useState('')
     const [movieSimilar, setMovieSimilar] = useState([])
-
     const [loadingMovieData, setLoadingMovieData] = useState(true)
     const [loadingYoutubeKeyData, setLoadingYoutubeKeyData] = useState(true)
     const [loadingMovieSimilar, setLoadingMovieSimilar] = useState(true)
-
     const [showTrailer, setShowTrailer] = useState(false)
 
+    const navigate = useNavigate()
     const trailerVid = useRef()
     const trailerBtnDiv = useRef()
     const trailerBtnText = useRef()
@@ -66,7 +63,6 @@ function Trailer() {
         background: `url(${imagePath}${movieBackdrop}) no-repeat center`,
         backgroundSize: 'cover',
         width: '100%'
-        // backgroundPosition: 'top'
     }
 
     function hideTrailer(event) {
