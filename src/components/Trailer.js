@@ -103,7 +103,7 @@ function Trailer() {
                     </div>
                 </div>
             </div>
-            <div className="info-footer">
+            <div className="trailer-and-recommendations">
                 {/* Trailer and poster/info */}
                 {showTrailer ? (
                     <div ref={trailerVid} className="movie-box"> 
@@ -158,9 +158,9 @@ function Trailer() {
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 )}
-
                 {/* Recommendations */}
                 <div className="recommendation-container">
                     <p className="recommendation-text">You may also like</p>
