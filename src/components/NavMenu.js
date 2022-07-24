@@ -48,7 +48,7 @@ function NavMenu({genreArr, setGenreArr}) {
         <div className="nav-page">
             {/* Close navigation button */}
             <div className="close-page">
-                <motion.img onClick={handleBack} className="close-page-icon" src={closeNav} alt="Exit navigation icon" whileHover={{scale: .9}}/>
+                <motion.img onClick={handleBack} className="close-page-icon" src={closeNav} alt="Exit navigation icon" whileHover={{scale: .9, rotate: 90}}/>
             </div>
 
             {/* Navigation options */}

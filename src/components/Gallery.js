@@ -91,7 +91,7 @@ function Gallery({genreArr, setGenreArr}) {
                 </div>
                 <div className="hamburger">
                     <Link to="/navigate">
-                        <motion.img className="hamburger-image" src={hamburger} alt="Navigation Button" whileHover={{scale: .9}}/>
+                        <motion.img className="hamburger-image" src={hamburger} alt="Navigation Button" whileHover={{scale: .9, rotate: 180}}/>
                     </Link>
                 </div>
             </div>

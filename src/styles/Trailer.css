@@ -139,7 +139,7 @@
 }
 
 .trailer-button:hover {
-    background: #362C5D;
+    background: rgba(140, 82, 255, .85);
 }
 
 .play-trailer {
