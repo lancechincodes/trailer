@@ -20,7 +20,7 @@ export function getTrendingThisWeekData(api, key, setTrendingThisWeek, setLoadin
   fetch(url)
     .then(res => res.json())
     .then(res => {
-      setTrendingThisWeek(res.results[1].backdrop_path)
+      setTrendingThisWeek(res.results[0].backdrop_path)
     })
     .catch(err => console.log(err))
     .finally(() => {

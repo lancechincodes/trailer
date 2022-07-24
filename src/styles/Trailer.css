@@ -3,6 +3,8 @@
     background: #362C5D;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Backdrop and headings */
@@ -11,7 +13,7 @@
 }
 
 .backdrop-box {
-    height: 250px;
+    height: 300px;
     position: relative;
 }
 
@@ -57,7 +59,7 @@
 }
 
 .movie-poster {
-    width: 200px;
+    width: 210px;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
@@ -78,7 +80,7 @@
 
 .title {
     font-family: 'Sifonn Pro', sans-serif;
-    font-size: 26px;
+    font-size: 24px;
     color: white;
     margin: 10px 0px;
 }
@@ -123,7 +125,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
+    width: 70px;
     background: #8C52FF;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -159,7 +161,6 @@
     color: white;
     font-size: 14px;
     overflow-y: scroll;
-    /* margin-left: 0; */
 }
 
 .description-text {
@@ -173,17 +174,18 @@
     color: white;
     font-size: 14px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 .similar-movies {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .similar-movie-posters {
-    width: 80px;
+    width: 84px;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
@@ -196,50 +198,54 @@
     display: none;
 }
 
-.info-footer {
-    height: 65vh;
+.trailer-and-recommendations {
+    margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .recommendation-container-hide {
     display: none;
 }
 
-/***********LEVEL 4***********/ 
-@media screen and (min-width: 460px) and (max-width: 499px) {
+/***********LEVEL 3***********/ 
+@media screen and (min-width: 460px) and (max-width: 559px) {
+    .movie-box { 
+        margin: 20px;
+    }
+
     .similar-movie-posters-link:nth-child(5) {
         display: block;
     }
 
     .title {
-        font-size: 28px;
+        font-size: 25px;
     }
 
     .movie-year {
-        font-size: 17px;
+        font-size: 15px;
     }
     
     .tmdb-rating {
-        font-size: 17px;
+        font-size: 15px;
     }   
     
     .movie-time {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .trailer-button {
-        width: 90px;
+        width: 75px;
         height: 30px;
     }
     
     .play-trailer {
-        width: 14px;
+        width: 13px;
     }
     
     .trailer-text {
-        font-size: 17px;
+        font-size: 15px;
         padding-top: 4.8px;
     }
 
@@ -256,47 +262,52 @@
     }
     
     .description-box {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .recommendation-text {
-        font-size: 17px;
+        font-size: 15px;
+        margin-left: 20px;
     }
 }
 
 /***********LEVEL 4***********/ 
-@media screen and (min-width: 500px) and (max-width: 559px) {
-    .similar-movie-posters-link:nth-child(5) {
+@media screen and (min-width: 559px) and (max-width: 649px) {
+    .movie-box { 
+        margin: 30px;
+    }
+
+    .similar-movie-posters-link:nth-child(5), .similar-movie-posters-link:nth-child(6) {
         display: block;
     }
 
     .title {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .movie-year {
-        font-size: 17px;
+        font-size: 16px;
     }
     
     .tmdb-rating {
-        font-size: 17px;
+        font-size: 16px;
     }   
     
     .movie-time {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .trailer-button {
-        width: 90px;
+        width: 80px;
         height: 30px;
     }
     
     .play-trailer {
-        width: 14px;
+        width: 13px;
     }
     
     .trailer-text {
-        font-size: 17px;
+        font-size: 16px;
         padding-top: 4.8px;
     }
 
@@ -313,124 +324,16 @@
     }
     
     .description-box {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .recommendation-text {
-        font-size: 17px;
+        font-size: 16px;
+        margin-left: 30px;
     }
 }
 
 /*SWITCH VIEWS*/
-/***********LEVEL 4***********/ 
-@media screen and (min-width: 560px) and (max-width: 649px) {
-    .backdrop-box {
-        height: 100vh;
-        position: relative;
-    }
-
-    .backdrop-box:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background: rgba(0,0,0,.8);
-    }
-
-    .movie-box {
-        position: absolute;
-        top: 100px;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        height: 500px;
-        width: 450px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .movie-poster-box {
-        display: flex;
-        align-items: center;
-        width: 260px;
-    }
-    
-    .movie-poster {
-        width: 260px;
-    }
-
-    .title {
-        font-size: 28px;
-    }
-
-    .movie-year {
-        font-size: 12px;
-    }
-    
-    .tmdb-rating {
-        font-size: 12px;
-    }   
-    
-    .movie-time {
-        font-size: 12px;
-    }
-
-    .trailer-button {
-        width: 70px;
-        height: 25px;
-    }
-    
-    .play-trailer {
-        width: 10px;
-    }
-    
-    .trailer-text {
-        font-size: 12px;
-        padding-top: 4px;
-    }
-
-    .description-container {
-        margin-left: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 350px;
-    }
-        
-    .description-box {
-        font-size: 12px;
-    }
-
-    .recommendation-container {
-        display: none;
-    }
-
-    .recommendation-container-hide {
-        display: block;
-    }
-
-    .recommendation-text {
-        margin: 10px 0px;
-        font-size: 12px;
-    }
-
-    .similar-movies {
-        margin: 0;
-        justify-content: flex-start;
-    }    
-
-    .similar-movie-posters {
-        width: 82px;
-    }
-
-    .similar-movie-posters-link:nth-child(3) {
-        display: none;
-    }
-}
-
 
 /***********LEVEL 5***********/ 
 @media screen and (min-width: 650px) and (max-width: 769px) {
@@ -465,11 +368,11 @@
     .movie-poster-box {
         display: flex;
         align-items: center;
-        width: 285px;
+        width: 290px;
     }
     
     .movie-poster {
-        width: 285px;
+        width: 290px;
     }
 
     .title {
@@ -477,33 +380,33 @@
     }
 
     .movie-year {
-        font-size: 14px;
+        font-size: 15px;
     }
     
     .tmdb-rating {
-        font-size: 14px;
+        font-size: 15px;
     }   
     
     .movie-time {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .trailer-button {
-        width: 95px;
+        width: 80px;
         height: 30px;
     }
     
     .play-trailer {
-        width: 12px;
+        width: 13px;
     }
     
     .trailer-text {
-        font-size: 14px;
+        font-size: 15px;
         padding-top: 4px;
     }
 
     .description-container {
-        margin-left: 30px;
+        margin-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -511,11 +414,25 @@
     }
 
     .description-box {
-        font-size: 14px;
+        font-size: 15px;
     }
+
+    .title-box {
+        margin-bottom: 5px;
+    }
+
+    .date-rating-box {
+        margin-bottom: 5px;
+    }
+
+    .trailer-time {
+        margin-bottom: 5px;
+    }
+    
 
     .recommendation-container {
         display: none;
+        margin-bottom: 5px;
     }
 
     .recommendation-container-hide {
@@ -533,7 +450,7 @@
     }    
 
     .similar-movie-posters {
-        width: 86px;
+        width: 80px;
     }
 
     .similar-movie-posters-link:nth-child(4) {
@@ -565,7 +482,7 @@
         right: 0;
         left: 0;
         height: 600px;
-        width: 750px;
+        width: 700px;
         margin: auto;
         display: flex;
         justify-content: center;
@@ -582,7 +499,7 @@
     }
 
     .title {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .movie-year {
@@ -598,12 +515,12 @@
     }
 
     .trailer-button {
-        width: 95px;
+        width: 85px;
         height: 30px;
     }
     
     .play-trailer {
-        width: 12px;
+        width: 13px;
     }
     
     .trailer-text {
@@ -612,27 +529,27 @@
     }
 
     .description-container {
-        margin-left: 30px;
+        margin-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
     .title-box {
-        margin-bottom: 10px;
+        margin-bottom: 7.5px;
     }
 
     .date-rating-box {
-        margin-bottom: 10px;
+        margin-bottom: 7.5px;
     }
 
     .trailer-time {
-        margin-bottom: 10px;
+        margin-bottom: 7.5px;
     }
     
     .description-box {
         font-size: 16px;
-        margin-bottom: 10px;
+        margin-bottom: 7.5px;
     }
 
     .recommendation-container {
@@ -645,7 +562,7 @@
 
     .recommendation-text {
         margin: 10px 0px;
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .similar-movies {
@@ -654,7 +571,7 @@
     }    
 
     .similar-movie-posters {
-        width: 88px;
+        width: 84px;
     }
 }
 
@@ -697,23 +614,23 @@
     }
 
     .title {
-        font-size: 38px;
+        font-size: 35px;
     }
 
     .movie-year {
-        font-size: 18px;
+        font-size: 17px;
     }
     
     .tmdb-rating {
-        font-size: 18px;
+        font-size: 17px;
     }   
     
     .movie-time {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .trailer-button {
-        width: 95px;
+        width: 90px;
         height: 30px;
     }
     
@@ -722,12 +639,12 @@
     }
     
     .trailer-text {
-        font-size: 18px;
+        font-size: 17px;
         padding-top: 4px;
     }
 
     .description-container {
-        margin-left: 30px;
+        margin-left: 25px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -746,7 +663,7 @@
     }
     
     .description-box {
-        font-size: 18px;
+        font-size: 17px;
         margin-bottom: 10px;
     }
 
@@ -760,7 +677,7 @@
 
     .recommendation-text {
         margin: 10px 0px;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .similar-movies {
@@ -797,18 +714,18 @@
         right: 0;
         left: 0;
         height: 600px;
-        width: 900px;
+        width: 850px;
         margin: auto;
     }
 
     .movie-poster-box {
         display: flex;
         align-items: center;
-        width: 500px;
+        width: 320px;
     }
     
     .movie-poster {
-        width: 350px;
+        width: 320px;
     }
 
     .title {
@@ -828,12 +745,12 @@
     }
 
     .trailer-button {
-        width: 95px;
+        width: 90px;
         height: 30px;
     }
 
     .play-trailer {
-        width: 13px;
+        width: 13.5px;
     }
     
     .trailer-text {
@@ -875,7 +792,7 @@
 
     .recommendation-text {
         margin: 10px 0px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .similar-movies {
@@ -888,7 +805,7 @@
     }
 
     .similar-movie-posters {
-        width: 90px;
+        width: 87px;
     }
 }
 
@@ -932,32 +849,32 @@
     }
 
     .title {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     .movie-year {
-        font-size: 18px;
+        font-size: 19px;
     }
     
     .tmdb-rating {
-        font-size: 18px;
+        font-size: 19px;
     }   
     
     .movie-time {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .trailer-button {
-        width: 95px;
+        width: 92.5px;
         height: 30px;
     }
     
     .play-trailer {
-        width: 13px;
+        width: 14px;
     }
     
     .trailer-text {
-        font-size: 18px;
+        font-size: 19px;
         padding-top: 4px;
     }
 
@@ -981,7 +898,7 @@
     }
     
     .description-box {
-        font-size: 18px;
+        font-size: 19px;
         margin-bottom: 10px;
     }
 
@@ -995,7 +912,7 @@
 
     .recommendation-text {
         margin: 10px 0px;
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .similar-movies {
@@ -1013,7 +930,7 @@
 }
 
 /***********LEVEL 1***********/
-@media screen and (max-width: 400px) and (max-height: 700px) {
+@media screen and (max-width: 400px) and (max-height: 741px) {
     .backdrop-box {
         height: 220px;
         position: relative;
@@ -1032,15 +949,15 @@
     }
     
     .movie-year {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .tmdb-rating {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .movie-time {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .trailer-button {
@@ -1056,10 +973,14 @@
     }
     
     .description-box {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .recommendation-text {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    .similar-movie-posters {
+        width: 76px;
     }
 }

@@ -1,6 +1,4 @@
 import '../styles/NavMenu.css'
-import { motion } from 'framer-motion'
-import { Link, useNavigate } from 'react-router-dom'
 import closeNav from '../assets/close-nav.svg'
 import home from '../assets/home.svg'
 import movie from '../assets/movie.svg'
@@ -9,6 +7,8 @@ import surprise from '../assets/surprise.svg'
 import trending from '../assets/trending.svg'
 import tmdb from '../assets/tmdb.svg'
 import logoImage from '../assets/logo-image.svg'
+import { motion } from 'framer-motion'
+import { Link, useNavigate } from 'react-router-dom'
 import { getGenreData, getRandomMovieId } from '../utils'
 import { useState, useEffect, useContext  } from 'react'
 import { DataContext } from '../DataContext'
@@ -93,22 +93,24 @@ function NavMenu({genreArr, setGenreArr}) {
                 </div>
             </div>
             
-            {/* Navigation attribution */}
-            <div className="attribution">
-                <img className="tmdb-logo" src={tmdb} alt="TMDB Logo"/>
-                <p className="attribution-text">
-                    This product uses TMDB API but is not endorsed or certified by TMDB.
-                </p>
-            </div>
-
-            {/* Trailer Logo  */}
-            <div className="trailer-lance">
-                <div className="logo-nav">
-                        <img className="logo-image-nav" src={logoImage} alt="Trailer Logo"/>
-                        <h1 className="logo-title-nav">TRAILER</h1>
+            <div className="attribution-and-trailer-logo">
+                {/* Navigation attribution */}
+                <div className="attribution">
+                    <img className="tmdb-logo" src={tmdb} alt="TMDB Logo"/>
+                    <p className="attribution-text">
+                        This product uses TMDB API but is not endorsed or certified by TMDB.
+                    </p>
                 </div>
-                <div className="developed-by">
-                    <p className="lance">Developed by Lance Chin</p>
+
+                {/* Trailer Logo  */}
+                <div className="trailer-lance">
+                    <div className="logo-nav">
+                            <img className="logo-image-nav" src={logoImage} alt="Trailer Logo"/>
+                            <h1 className="logo-title-nav">TRAILER</h1>
+                    </div>
+                    <div className="developed-by">
+                        <p className="lance">Developed by Lance Chin</p>
+                    </div>
                 </div>
             </div>
         </div>

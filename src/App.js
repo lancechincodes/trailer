@@ -7,7 +7,6 @@ import Browse from './components/Browse'
 import NavMenu from './components/NavMenu'
 import Gallery from './components/Gallery'
 import Trailer from './components/Trailer'
-// import { getTrendingTodayData, getTrendingThisWeekData, getGenreData } from './utils' 
 
 function App() {
   // provides info on current route location

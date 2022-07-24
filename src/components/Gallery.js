@@ -1,14 +1,14 @@
 import '../styles/Gallery.css'
+import hamburger from '../assets/hamburger.svg'
+import back from '../assets/back.svg'
+import 'react-circular-progressbar/dist/styles.css';
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useEffect, useContext, useState, useRef } from 'react'
 import { DataContext }from '../DataContext'
 import { getGalleryData } from '../utils'
 import { motion } from 'framer-motion'
-import hamburger from '../assets/hamburger.svg'
-import back from '../assets/back.svg'
 import { getGenreData } from '../utils'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 
 function Gallery({genreArr, setGenreArr}) {
     const { genreId } = useParams()
@@ -46,7 +46,7 @@ function Gallery({genreArr, setGenreArr}) {
         getGalleryData(url, setGalleryMovies, setLoadingGallery)
     },[])
 
-    // Include dependency array of genreArr so that it updates when page is refreshed
+    // include dependency array of genreArr so that it updates when page is refreshed
     useEffect(() => {
         for (let i = 0; i < genreArr.length; i++) {
             if (genreArr[i].id === parseInt(genreId)) {
@@ -134,13 +134,6 @@ function Gallery({genreArr, setGenreArr}) {
                                         <motion.div className="poster-box">
                                             <motion.img whileHover={{scale: .95}} onClick={() => handleClick(movie.id)} className="poster-img" src={imagePath + movie.poster_path} alt={movie.title}/>
                                         </motion.div>
-                                        {/* <div className="title-box">
-                                            <Link to={`/browse/${genreId}/${movie.id}`}>
-                                            <p className="movie-title">
-                                                {movie.title}
-                                            </p>
-                                            </Link>
-                                        </div> */}
                                     </div>
                                 </div>
                             ))}
