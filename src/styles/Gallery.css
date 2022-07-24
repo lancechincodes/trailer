@@ -197,3 +197,48 @@
         width: 290px;
     }
 }
+
+/***********IPAD AIR***********/
+@media screen and (width: 820px) and (height: 1180px) {
+    .outer-carousel {
+        margin-top: 250px;
+    }
+}
+
+/***********IPAD MINI***********/
+@media screen and (width: 768px) and (height: 1024px) {
+    .outer-carousel {
+        margin-top: 150px;
+    }
+}
+
+/***********SURFACE PRO 7***********/
+@media screen and (width: 912px) and (height: 1368px) {
+    .outer-carousel {
+        margin-top: 400px;
+    }
+}
+
+/***********SURFACE PRO 7***********/
+@media screen and (width: 912px) and (height: 1368px) {
+    .outer-carousel {
+        margin-top: 400px;
+    }
+}
+
+/***********NEST HUB***********/
+@media screen and (width: 1024px) and (height: 600px) {
+    .outer-carousel {
+        margin-bottom: 50px;
+    }
+
+    .poster-title-div {
+        width: 300px;
+    }
+    .rating-wheel-div {
+        width: 250px;  
+    }
+    .poster-img { 
+        width: 250px;
+    }
+}
