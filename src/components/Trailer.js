@@ -153,8 +153,7 @@ function Trailer() {
                                     ))}
                                 </div>
                             </div>
-                        </div>
-                        
+                        </div>  
                     </div>
                 )}
                 {/* Recommendations */}
