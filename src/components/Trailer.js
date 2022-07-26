@@ -46,7 +46,6 @@ function Trailer() {
         getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimilar)
     },[])
 
-    console.log(movieSimilar)
     // calculate min and hour from total min
     let min = movieTime
     let hour = 0
