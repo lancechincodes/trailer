@@ -75,7 +75,14 @@ export function getGalleryData(url, setGalleryMovies, setLoadingGallery) {
   fetch(url)
     .then(res => res.json())
     .then(res => {
-      setGalleryMovies(res.results)
+      // console.log(res)
+      let filteredResults = []
+      for (let i = 0; i < res.results.length; i++) {
+        if (res.results[i].poster_path !== null) {
+          filteredResults.push(res.results[i])
+        }
+      }
+      setGalleryMovies(filteredResults)
     })
     .catch(err => console.log(err))
     .finally(() => {
@@ -89,7 +96,7 @@ export function getMovieData(url, setMovieBackdrop, setMovieTitle, setMoviePoste
   fetch(url) 
     .then(res => res.json())
     .then(res => {
-      console.log(res)
+      // console.log(res)
       setMovieBackdrop(res.backdrop_path)
       setMovieTitle(res.title)
       setMoviePoster(res.poster_path)
@@ -110,6 +117,7 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeK
   fetch(url2)
     .then(res => res.json())
     .then(res => {
+      // console.log(res)
       let filteredRes = res.results.filter((vid) => vid.type === "Trailer")
       let found = false
       for (let i = 0; i < filteredRes.length; i++) {
@@ -122,6 +130,16 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeK
       if (!found) {
         for (let i = 0; i < filteredRes.length; i++) {
           if (filteredRes[i].name.includes("Trailer")) {
+            setTrailerYoutubeKey(filteredRes[i].key)
+            found = true
+            break;
+          }
+        }
+      }
+      if (!found) {
+        filteredRes = res.results.filter((vid) => vid.type === "Teaser")
+        for (let i = 0; i < filteredRes.length; i++) {
+          if (filteredRes[i].name.includes("Official Teaser")) {
             setTrailerYoutubeKey(filteredRes[i].key)
             break;
           }
@@ -140,9 +158,12 @@ export function getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimila
   fetch(url3) 
     .then(res => res.json())
     .then(res => {
+      // console.log(res)
       let similarMovieArr = []
-      for (let i = 0; i < 8; i++) {
-        similarMovieArr.push(res.results[i])
+      for (let i = 0; i < res.results.length; i++) {
+        if (res.results[i].backdrop_path !== null) {
+          similarMovieArr.push(res.results[i])
+        } 
       }
       setMovieSimilar(similarMovieArr)
     })
