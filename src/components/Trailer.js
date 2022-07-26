@@ -46,6 +46,7 @@ function Trailer() {
         getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimilar)
     },[])
 
+    console.log(movieSimilar)
     // calculate min and hour from total min
     let min = movieTime
     let hour = 0
@@ -144,7 +145,7 @@ function Trailer() {
                                 <p className="description-text">{movieDescription}</p>
                             </div>
                             <div className="recommendation-container-hide">
-                                <p className="recommendation-text">You may also like</p>
+                                {movieSimilar.length !== 0 ? <p className="recommendation-text">You may also like</p> : null}
                                 <div className="similar-movies">
                                     {movieSimilar.map((movie) => (
                                         <Link className="similar-movie-posters-link" to={`/browse/${movie.genre_ids[0]}/${movie.id}`} key={movie.id}>
@@ -158,7 +159,7 @@ function Trailer() {
                 )}
                 {/* Recommendations */}
                 <div className="recommendation-container">
-                    <p className="recommendation-text">You may also like</p>
+                    {movieSimilar.length !== 0 ? <p className="recommendation-text">You may also like</p> : null}
                     <div className="similar-movies">
                         {movieSimilar.map((movie) => (
                             <Link className="similar-movie-posters-link" to={`/browse/${movie.genre_ids[0]}/${movie.id}`} key={movie.id}>

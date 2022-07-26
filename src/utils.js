@@ -75,8 +75,14 @@ export function getGalleryData(url, setGalleryMovies, setLoadingGallery) {
   fetch(url)
     .then(res => res.json())
     .then(res => {
-      console.log(res)
-      setGalleryMovies(res.results)
+      // console.log(res)
+      let filteredResults = []
+      for (let i = 0; i < res.results.length; i++) {
+        if (res.results[i].poster_path !== null) {
+          filteredResults.push(res.results[i])
+        }
+      }
+      setGalleryMovies(filteredResults)
     })
     .catch(err => console.log(err))
     .finally(() => {
@@ -152,7 +158,7 @@ export function getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimila
   fetch(url3) 
     .then(res => res.json())
     .then(res => {
-      console.log(res)
+      // console.log(res)
       let similarMovieArr = []
       for (let i = 0; i < res.results.length; i++) {
         if (res.results[i].backdrop_path !== null) {
