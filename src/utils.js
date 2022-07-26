@@ -75,6 +75,7 @@ export function getGalleryData(url, setGalleryMovies, setLoadingGallery) {
   fetch(url)
     .then(res => res.json())
     .then(res => {
+      console.log(res)
       setGalleryMovies(res.results)
     })
     .catch(err => console.log(err))
@@ -110,7 +111,7 @@ export function getYoutubeKeyData(url2, setTrailerYoutubeKey, setLoadingYoutubeK
   fetch(url2)
     .then(res => res.json())
     .then(res => {
-      console.log(res)
+      // console.log(res)
       let filteredRes = res.results.filter((vid) => vid.type === "Trailer")
       let found = false
       for (let i = 0; i < filteredRes.length; i++) {
@@ -151,9 +152,12 @@ export function getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimila
   fetch(url3) 
     .then(res => res.json())
     .then(res => {
+      console.log(res)
       let similarMovieArr = []
-      for (let i = 0; i < 8; i++) {
-        similarMovieArr.push(res.results[i])
+      for (let i = 0; i < res.results.length; i++) {
+        if (res.results[i].backdrop_path !== null) {
+          similarMovieArr.push(res.results[i])
+        } 
       }
       setMovieSimilar(similarMovieArr)
     })
