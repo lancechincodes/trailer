@@ -117,18 +117,34 @@ function Gallery({genreArr, setGenreArr}) {
                                     <div className="poster-title-div">
                                         <div className="rating-wheel-div">
                                             <div className="rating-wheel">
-                                                <CircularProgressbar 
-                                                    value={Math.round(movie.vote_average * 10)} 
-                                                    text={`${Math.round(movie.vote_average * 10)}%`} 
-                                                    background
-                                                    backgroundPadding={6}
-                                                    styles={buildStyles({
-                                                        backgroundColor: "#362C5D",
-                                                        textColor: "#FFFFFF",
-                                                        pathColor: "#0FF2F2",
-                                                        textSize: '26px'
-                                                    })}    
-                                                />
+                                                {movie.vote_average === 0 ? (
+                                                    <CircularProgressbar 
+                                                        // value={Math.round(movie.vote_average * 10)} 
+                                                        text={'NR'} 
+                                                        background
+                                                        backgroundPadding={6}
+                                                        styles={buildStyles({
+                                                            backgroundColor: "#362C5D",
+                                                            textColor: "#FFFFFF",
+                                                            textSize: '26px'
+                                                        })}    
+                                                    />
+                                                )
+                                                : (
+                                                    <CircularProgressbar 
+                                                        value={Math.round(movie.vote_average * 10)} 
+                                                        text={`${Math.round(movie.vote_average * 10)}%`} 
+                                                        background
+                                                        backgroundPadding={6}
+                                                        styles={buildStyles({
+                                                            backgroundColor: "#362C5D",
+                                                            textColor: "#FFFFFF",
+                                                            pathColor: "#0FF2F2",
+                                                            textSize: '26px'
+                                                        })}    
+                                                    />
+                                                )
+                                            }                                       
                                             </div>
                                         </div>
                                         <motion.div className="poster-box">
