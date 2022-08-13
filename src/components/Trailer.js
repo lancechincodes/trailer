@@ -125,7 +125,11 @@ function Trailer() {
                             <div className="date-rating-box">
                                 <p className="movie-year">{movieDate.substring(0,4)}</p>
                                 <div className="tmdb-rating-box">
-                                    <p className="tmdb-rating">| TMDB: {+movieRating.toFixed(1)}/10</p>
+                                    {movieRating === 0 ? (
+                                        <p className="tmdb-rating">| TMDB: NR</p>
+                                    ) : (
+                                        <p className="tmdb-rating">| TMDB: {+(movieRating*10).toFixed(0)}%</p>
+                                    )}
                                 </div>
                             </div>
                             <div className="trailer-time">
@@ -138,7 +142,8 @@ function Trailer() {
                                     <p ref={trailerBtnText} className="trailer-text">Trailer</p>
                                 </button>
                                 {hour !== 0 ? (<p className="movie-time">{hour}h {min}m</p>) 
-                                : (<p className="movie-time">{min}m</p>)}
+                                : (min !== 0 ? (<p className="movie-time">{min}m</p>) 
+                                : (<p className="movie-time">Runtime: TBD</p>))}
                             </div>
                             <div className="description-box">
                                 <p className="description-text">{movieDescription}</p>
