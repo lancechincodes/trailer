@@ -36,21 +36,24 @@
 .carousel-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
     margin: 0 19px;
 }
 
 .outer-carousel {
     height: 75vh;
-    cursor: grab;
-    overflow: hidden;
+    /* cursor: grab; */
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .inner-carousel {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .poster-title-div {

@@ -55,10 +55,12 @@ function Gallery({genreArr, setGenreArr}) {
         }
     }, [genreArr])
 
+    /*
     setTimeout(() => {
         // width of carousel must be total width - width of what it shown (offset)
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
     }, 300)
+    */
 
     function handleClick(movieId) {
         navigate(`/browse/${genreId}/${movieId}`)
@@ -108,8 +110,8 @@ function Gallery({genreArr, setGenreArr}) {
                 <div className="carousel-container">
                     <motion.div ref={carousel} className="outer-carousel" >
                         <motion.div 
-                            drag="x" 
-                            dragConstraints={{ right: 0, left: -width }}
+                            // drag="x" 
+                            // dragConstraints={{ right: 0, left: -width }}
                             className="inner-carousel"
                         >
                             {galleryMovies.map(movie => (
