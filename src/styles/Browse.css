@@ -1,6 +1,6 @@
 /***********LEVEL 2***********/
 .browse {
-    background: #362C5D;
+    background-image: linear-gradient(to bottom right, #2e215d, #372776);
     height: 100vh;
     overflow: hidden;
     display: flex; 
@@ -361,7 +361,7 @@
     }
 
     .trending-box {
-        height: 180px;
+        height: 220px;
     }
 
     .trending-poster {
