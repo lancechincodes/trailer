@@ -1,6 +1,6 @@
 /***********LEVEL 2***********/
 .loading-page {
-    background: #362C5D;
+    background-image: linear-gradient(to bottom right, #2e215d, #372776);
     display: flex;
     justify-content: center;
     align-items: center;
