@@ -172,3 +172,23 @@ export function getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimila
       setLoadingMovieSimilar(false)
     })
 }
+
+// Request watch providers for movie
+export function getWatchProviders(url4, setWatchProviders, setLoadingWatchProviders) {
+  setLoadingWatchProviders(true)
+  fetch(url4)
+    .then(res => res.json())
+    .then(res => {
+      // console.log(res.results['US']['flatrate'])
+      let watchProvidersData = res.results['US']['flatrate']
+      let watchProvidersLogos = []
+      for (let i = 0; i < watchProvidersData.length; i++) {
+        watchProvidersLogos.push(watchProvidersData[i]['logo_path'])
+      }
+      setWatchProviders(watchProvidersLogos)
+    })
+    .catch(err => console.log(err))
+    .finally(() => {
+      setLoadingWatchProviders(false)
+    })
+}

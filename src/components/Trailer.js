@@ -5,7 +5,7 @@ import playTrailer from '../assets/play-trailer.svg'
 import YouTube from 'react-youtube'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState, useContext, useRef } from 'react'
-import { getMovieData, getYoutubeKeyData, getMovieSimilarData } from '../utils'
+import { getMovieData, getYoutubeKeyData, getMovieSimilarData, getWatchProviders } from '../utils'
 import { DataContext } from '../DataContext'
 import { motion } from 'framer-motion'
 
@@ -25,6 +25,8 @@ function Trailer() {
     const [loadingYoutubeKeyData, setLoadingYoutubeKeyData] = useState(true)
     const [loadingMovieSimilar, setLoadingMovieSimilar] = useState(true)
     const [showTrailer, setShowTrailer] = useState(false)
+    const [watchProviders, setWatchProviders] = useState([])
+    const [loadingWatchProviders, setLoadingWatchProviders] = useState(true)
 
     const navigate = useNavigate()
     const trailerVid = useRef()
@@ -44,6 +46,10 @@ function Trailer() {
         // get similar movies as selected one
         const url3 = `${searchOptions.api}/movie/${movieId}/recommendations?api_key=${searchOptions.key}&${searchOptions.language}&page=1`
         getMovieSimilarData(url3, setMovieSimilar, setLoadingMovieSimilar)
+
+        // get watch providers for selected movie
+        const url4 = `${searchOptions.api}/movie/${movieId}/watch/providers?api_key=${searchOptions.key}`
+        getWatchProviders(url4, setWatchProviders, setLoadingWatchProviders)
     },[])
 
     // calculate min and hour from total min
@@ -74,7 +80,7 @@ function Trailer() {
         }
     }
 
-    if (loadingMovieData || loadingYoutubeKeyData || loadingMovieSimilar) {
+    if (loadingMovieData || loadingYoutubeKeyData || loadingMovieSimilar || loadingWatchProviders) {
         return (
             <div className="loading-page">
                 <span className="loader"></span>
@@ -144,6 +150,11 @@ function Trailer() {
                                 {hour !== 0 ? (<p className="movie-time">{hour}h {min}m</p>) 
                                 : (min !== 0 ? (<p className="movie-time">{min}m</p>) 
                                 : (<p className="movie-time">Runtime: TBD</p>))}
+                            </div>
+                            <div className="watch-provider-box hide">
+                                {watchProviders.map((provider) => (
+                                    <img className="watch-provider-logo" src={imagePath + provider} alt="Watch providers"/>
+                                ))}
                             </div>
                             <div className="description-box">
                                 <p className="description-text">{movieDescription}</p>
