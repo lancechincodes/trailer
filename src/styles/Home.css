@@ -1,6 +1,6 @@
 /***********LEVEL 2***********/
 .home {
-    background: #362C5D;
+    background-image: linear-gradient(to bottom right, #2e215d, #372776);
     height: 100vh;
     display: flex;
     align-items: center;
