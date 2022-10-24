@@ -167,6 +167,19 @@
     margin-right: 2px;
 }
 
+/* Watch provider */
+.watch-provider-box {
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.watch-provider-logo {
+    border-radius: 10px;
+    width: 50px;
+    margin: 5px;
+}
+
 /* Recommendations */
 .recommendation-text {
     font-family: 'Sifonn Pro', sans-serif;
@@ -268,6 +281,10 @@
         font-size: 15px;
         margin-left: 20px;
     }
+
+    .hide {
+        display: none;
+    }
 }
 
 /***********LEVEL 4***********/ 
@@ -329,6 +346,10 @@
     .recommendation-text {
         font-size: 16px;
         margin-left: 30px;
+    }
+
+    .hide {
+        display: none;
     }
 }
 
