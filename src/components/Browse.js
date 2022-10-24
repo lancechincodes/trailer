@@ -82,8 +82,8 @@ function Browse({trendingToday, setTrendingToday, trendingThisWeek, setTrendingT
                         <img onClick={handleDelete} className="close-search-icon" src={closeSearch} alt="Delete Icon"/>
                     </div>
                 </div>
+            </div>
 
-        </div>
             {/* Trending boxes */}
             <div className="trending-title-and-boxes">
                 <p className="browse-section-title">Popular movies</p>

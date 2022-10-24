@@ -1,6 +1,6 @@
 /***********LEVEL 2***********/
 .gallery-page {
-    background: #362C5D;
+    background-image: linear-gradient(to bottom right, #2e215d, #372776);
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
