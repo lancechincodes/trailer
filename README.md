@@ -69,6 +69,8 @@ Trailer is home to all things movie trailers. From the most popular flicks of th
 ## Icebox Tickets 🧊 🎟
 - [x] Add TMDB rating to gallery page
 - [x] Add watch providers for selected movie
+- [ ] Add MPA film rating for selected movie
+- [ ] Add pagination on gallery page for more movie results 
 - [ ] Change navigation page to sliding navigation component  
 
 ## Reflection 🙌
